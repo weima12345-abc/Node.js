@@ -1,0 +1,128 @@
+.changes {
+    font-family: "楷体";
+    background-color: transparent;
+    height: 374px;
+    width: 853px;
+    border: 1px solid;
+    float: left;
+    margin-left: 323px;
+    margin-top: -269px;
+    border-radius: 8px 0px 8px 8px;
+    display: none;
+    position: relative;
+    margin-top: -500px;
+    margin-left: 220px;
+  
+}
+
+.changes input {
+    width: 195px;
+    height: 42px;
+    color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 44px;
+    margin-left: 47px;
+    font-size: 15px;
+}
+
+.changes input:focus {
+    outline: none;
+}
+
+.changes span {
+    margin-left: 46px;
+}
+
+.changes :first-child {
+    width: 15px;
+    height: 17px;
+    /* background-color: red; */
+    float: right;
+    border: none;
+    background-color: #4fb9ff;
+}
+
+.changes :first-child:focus {
+    outline: none;
+}
+
+button.one {
+    width: 72px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+button.one:focus {
+    outline: none;
+}
+
+button.two {
+    width: 72px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 132px;
+    margin-top: 20px;
+}
+
+button.two:focus {
+    outline: none;
+}
+
+.one input {
+    width: 60px;
+    height: 30px;
+}
+
+.footer {
+    float: left;
+}
+
+.one {
+    margin-left: 130px;
+    margin-top: 246px;
+    float: left;
+}
+
+.one input {
+    width: 22px;
+    height: 18px;
+}
+
+.change_class {
+    background-color: aqua;
+    float: left;
+    width: 774px;
+    height: 312px;
+    margin-top: -313px;
+    margin-left: 257px;
+}
+
+.change_class input {
+    width: 207px;
+    height: 42px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 17px;
+}
+
+.change_class input:focus {
+    outline: none;
+}
+
+.change_class span {
+    margin-left: 44px;
+}
+
+.changexx {
+    background-color: aqua;
+    border: none;
+    margin-top: -24px;
+}
+
+.changexx:focus {
+    outline: none;
+}
+

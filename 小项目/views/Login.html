@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="/stylesheets/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/stylesheets/tc.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/stylesheets/css/fontawesome-all.css">
+	<!-- <link rel="stylesheet" href="/stylesheets/test3.css"> -->
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<!-- //bg effect -->
+	<!-- title -->
+	<h1>Effect Login Form</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form action="/Login" method="POST">
+			<h2>Login Now
+	
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-user"></i>
+					Username
+				</label>
+				<input placeholder="Username" name="name" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					Password
+				</label>
+				<input placeholder="Password" name="password" type="password" required="">
+			</div>
+			<!-- checkbox -->
+			<div class="wthree-text">
+				<ul>
+					<li>
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Stay Signed In</span>
+						</label>
+					</li>
+					<li>
+						<a href="#">Forgot Password?</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //checkbox -->
+			<input type="submit" value="Log In">
+			<!-- <a href="/zc" target="_blank">注册</a> -->
+			<input  onclick="zc()" type="button" value="注册">
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+	</div>
+	<!-- //copyright -->
+	<form action="/zc" method="POST">
+	 <div class="changes" style="display: none;" id="changes">
+
+        <button onclick="close()" value="X" >
+            X
+        </button>
+        
+            <span>username：</span>
+            <input type="text" name="name"  placeholder="请输入英雄名称"class="change" >
+            <span>password：</span>
+            <input type="text" name="password" placeholder="请输入英雄年龄" class="change">
+			<button>Register</button>
+        <!-- <br> -->
+        
+            <!-- <span>英雄性别：</span>
+            <input type="text" placeholder="请输入英雄性别" list="sex_choose" class="change">
+            <datalist id="sex_choose">
+                <option value="汉子">汉子</option>
+                <option value="妹子">妹子</option>
+            </datalist>
+            <span>英雄籍贯：</span>
+            <input type="text" placeholder="请输入英雄籍贯" class="change"></tr>
+        <br>
+        
+            <span>英雄位置：</span>
+            <input type="text"  placeholder="请输入英雄位置" class="change">
+            <span>英雄台词：</span>
+            <input type="text"  placeholder="请输入英雄台词" class="change"> -->
+         </div>
+		</form>
+            <!-- <button type="button" value="确认" onclick="tj()" class="one">确认</button>
+            <button type="button" value="取消" onclick="qx()" class="two">取消</button> -->
+        
+   
+      
+
+	<!-- Jquery -->
+	<script src="/javascripts/js/jquery-3.3.1.min.js"></script>
+	<!-- //Jquery -->
+
+	<!-- effect js -->
+	<script src="/javascripts/js/canva_moving_effect.js"></script>
+	<!-- //effect js -->
+	<script src="/javascripts/jq_test.js"></script>
+</body>
+
+</html>

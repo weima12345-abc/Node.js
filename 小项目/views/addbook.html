@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+					<html lang="en">
+					<head>
+					    <meta charset="UTF-8">
+					    <title>Title</title>
+					</head>
+					<body>
+					<div>添加图书</div>
+					<form action="/editBook" method="post">
+					      <input type="hidden" name="id" value="{{result[0].id}}">
+					          名称：<input type="text" name="name" value="{{result[0].name}}"><br>
+					          作者：<input type="text" name="author" value="{{result[0].author}}"><br>
+					          分类：<input type="text" name="category" value="{{result[0].category}}"><br>
+					          描述：<input type="text" name="description" value="{{result[0].description}}"><br>
+					    <input type="submit" value="提交">
+					</form>
+					</body>
+					</html>

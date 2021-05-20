@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
+  
+  
+</head>
+<body>
+
+ <div class="all">后台管理系统</div>
+ 
+
+        <div id="first" class="first">
+            <span class="a">书籍名称:</span>
+            <input placeholder="请输入英雄名称">
+             <span class="a">作者:</span>
+             <input placeholder="位置" list="test">
+             <datalist id="test">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </datalist>
+                <span class="a">书籍类型:</span> 
+                <input placeholder="请选择" list="test1">
+                <datalist id="test1">
+                    <option>小说</option>
+                    <option>文学</option>
+                    <option>武侠</option>
+                </datalist>
+            <span class="bn">
+                <button class="b"onclick="aoa()">
+                    查询
+                </button>
+               
+                <a class="io" id="clearAll"href="" onclick="aob()">清空</a>
+            </span>
+            </div>
+            
+
+            <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
+        
+        
+                <div class="f">
+                <div class="d">
+                 <a href="add.html"><button class="e"onclick="getUrlInfo()">+ 添加</button></a>   
+               </div>
+                </div>
+               <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
+       
+       <div class="all1" style="color: red;">
+        <div class="ad">
+<table class="ui" id="er">
+    <thead>
+
+<tr >
+    <th class="q">编号</th>
+    <th class="q">名称</th>
+    <th class="q">作者</th>
+    <th class="w">类别</th>
+    <th class="y">描述</th> 
+    <th class="t">操作</th>
+</tr>
+	<tbody class="show1" >
+			<% detail.forEach((d,i)=>{ %>
+            <tr>
+				<td><%=d.编号 %></td>
+				<td><%=d.名称 %></td>
+				<td><%=d.作者 %></td>
+				<td><%=d.分类 %></td>
+				<td><%=d.描述 %></td>
+				<td class="j">
+					<button class="i" data-id=<%=i %>>修改</button></a>
+					<button class="o" data-id=<%=i %>>删除</button>   
+				<span class="upBtn"></span><span class="downBtn"></td>
+			</tr>
+		
+		<%})  %>
+			
+			
+		
+		</tbody>
+</table>
+        </div>
+       </div>
+      
+        
+    
+
+  </body>
+
+
+<script src="/javascripts/jq_test.js"></script>
+</html> 

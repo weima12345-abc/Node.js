@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=drive-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <link rel="stylesheet" href="../public/stylesheets/zc.css"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+<title>注册页面</title>
+
+</head>
+<style>
+  
+body{
+  
+  background-image: url("../images/mn.jpg");
+  background-repeat: no-repeat;
+  background-size: 50% auto ;background-position-x:300px ;
+  
+}
+#login-box{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15%;
+  text-align: center;
+  background: #00000060;
+  padding: 20px 50px;
+}
+#login-box h1{
+  color: #fff;
+}
+#login-box .form .item input{
+  margin-top: 15px;
+}
+#login-box .form i{
+  font-size: 18px;
+  color: #fff;
+}
+#login-box .form .item input {
+  width: 180px;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 2px solid#fff;
+  padding: 5px 10px;
+  background:#ffffff00;
+  color: #fff;
+}
+#login-box button{
+  margin-top: 15px;
+  width: 180px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background:linear-gradient(to right,#f30909 0%,#4013e6e1 100%);
+  border: 0;
+  border-radius: 15px;
+}
+
+</style>
+<body>
+  <form action="/zc" method="POST">
+    <div id="login-box">
+      
+        <h1>注册</h1>
+        <div class="form">
+            <div class="item">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <input type="text"name="name" placeholder="Username">
+            </div>
+            <div class="item">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="text"name="password" placeholder="Password">
+            </div>
+        </div>
+        <button>Register</button>
+    </div>
+</form>
+</body>
+</html>
+
+
