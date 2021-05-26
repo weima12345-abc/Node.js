@@ -7,8 +7,8 @@ let User=require('./bean/user');
 // }); 
 router.post('/',(req,res)=>{
 let user= new User(req.body.name,req.body.password);
-console.log(user); 
 req.session.user=user; 
-res.send("注册成功"); 
-})
+res.render("Login");
+// res.redirect('Login');
+});
 module.exports = router;

@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
-  
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   
 </head>
 <body>
 
  <div class="all">后台管理系统</div>
  
-
+<!-- <form action="/d" method="POST"></form> -->
         <div id="first" class="first">
             <span class="a">书籍名称:</span>
-            <input placeholder="请输入英雄名称">
+            <input placeholder="请输入英雄名称" name="名称" >
              <span class="a">作者:</span>
-             <input placeholder="位置" list="test">
+             <input placeholder="位置" list="test" name="作者">
              <datalist id="test">
                 <option>1</option>
                 <option>2</option>
@@ -28,28 +28,27 @@
                 <option>5</option>
             </datalist>
                 <span class="a">书籍类型:</span> 
-                <input placeholder="请选择" list="test1">
+                <input placeholder="请选择" list="test1" name="分类">
                 <datalist id="test1">
                     <option>小说</option>
                     <option>文学</option>
                     <option>武侠</option>
                 </datalist>
             <span class="bn">
-                <button class="b"onclick="aoa()">
-                    查询
-                </button>
+                <button type="submit" class="b" onclick="search()">查询</button>
+             
+                
                
                 <a class="io" id="clearAll"href="" onclick="aob()">清空</a>
             </span>
-            </div>
-            
-
+        </div>
+        <!-- </form> -->
             <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
         
         
                 <div class="f">
                 <div class="d">
-                 <a href="add.html"><button class="e"onclick="getUrlInfo()">+ 添加</button></a>   
+                 <a href="/dtxr"><button class="e"onclick="add()">+ 添加</button></a>   
                </div>
                 </div>
                <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
@@ -94,7 +93,8 @@
     
 
   </body>
-
-
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+  <script src="/javascripts/jquery-3.5.1.js"></script>
 <script src="/javascripts/jq_test.js"></script>
+<script src="/javascripts/Table.js"></script>
 </html> 

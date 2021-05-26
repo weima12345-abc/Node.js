@@ -74,6 +74,7 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 	  ); 
 	  let index=	this.getAttribute("data-id");
 	  window.location.href='/delete/'+index;
+
 	} else {
 	  swal("Your imaginary file is safe!");
 	}
@@ -85,5 +86,8 @@ Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(
 	let index=	this.getAttribute("data-id");
 	window.location.href='/update/'+index;
 	});
-//翻页
+	function search(){
+		window.location.href='/e';
+	}
+
 	

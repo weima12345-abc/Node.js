@@ -11,7 +11,7 @@ router.get('/',(req,res)=>{
       });  
          connection.query("select * from book",function(err,a,fieids){  
              console.log(a);    
-            res.render('test3',{detail:a});    
+            res.render('index',{detail:a});    
          });
     // res.render('index');
 });
