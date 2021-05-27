@@ -7,10 +7,15 @@ let connection=mysql.createConnection({
   database:"01"
 });
 router.post('/',(req,res)=>{
-  let sql=`select * from book where 名称=${req.body.作者} or 作者=${req.body.名称} or 分类=${req.body.分类}`;
-    connection.query(sql,function(err,a,fields){
-      res.redirect('/');
-    })
+
+  let sql=`select * from book where 名称 like '${req.body.名称}%' or 作者 like '${req.body.作者}%' or 分类 like '${req.body.分类}%' `;
+  connection.query(sql,function(err,a,fields){
+  res.render('test3',{detail:a});
+  })
+
+    
+    
+
 });
 
 module.exports=router;

@@ -74,6 +74,10 @@ li{
     height: 45px;
     width: 80px;
     border-style: none;
+    
+}
+.pp{
+    padding-left: 524px;
 }
 .f{
     padding-left: 55px;
@@ -154,6 +158,15 @@ select{
     text-decoration-line: none;
     outline:none;
 }
+.all{
+    padding-left: 521px;
+    font-size: xx-large;
+}
+.all1{
+    color: red;
+    padding-left: 128px;
+}
+
 .ad{
     padding-left: 68px;
 }
@@ -184,11 +197,16 @@ input{
 	box-shadow: 0 0 15px #03a9f4;
 }
 .bn{
-    padding-left: 40px;
+    
+    padding-left: 70px;
+}
+.bn1{
+    padding-left: 870px;
 }
 .first{
     padding-left: 55px;
     border: 1;
+    padding-top: 160px;
 }
 .qwe{
     width: 30px;

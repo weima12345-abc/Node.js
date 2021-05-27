@@ -5,30 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/add.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
     
     
      <!-- <link rel="icon" href="data:image/ico;base64,aWNv">
     <link rel="shortcut icon" href="img/bitbug_favicon2.ico" />  -->
 </head>
 <body>
-          <div class="changes" id="changes">
+       
     <form action="/d" method="POST">
-  
-
+        <div id="first" class="first">
+            <span class="a">书籍名称:</span>
+            <input placeholder="请输入英雄名称" name="名称" >
+             <span class="a">作者:</span>
+             <input placeholder="位置" list="test" name="作者">
+             <datalist id="test">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </datalist>
+                <span class="a">书籍类型:</span> 
+                <input placeholder="请选择" list="test1" name="分类">
+                <datalist id="test1">
+                    <option>小说</option>
+                    <option>文学</option>
+                    <option>武侠</option>
+                </datalist>
+            <a class="bn">
+                <button type="submit" class="b" onclick="search()">查询</button>
+                <a class="io" id="clearAll"href="" onclick="aob()">清空</a>
+            </a>
+        </div>      
+                 
             
-                <span>书籍名称：</span>
-                <input type="text"name="名称"placeholder="请输入数学成绩" class="change">
-                
-                <span>书籍作者：</span>
-                <input type="text" name="作者" placeholder="请输入英语成绩" class="change">
-          
-                <span>书籍分类：</span>
-                <input type="text"  name="分类"placeholder="请输入总成绩" class="change"> 
            
-                <input type="submit" value="提交">  
             </form>
-        </div> 
+     
    
     
 
