@@ -19,11 +19,16 @@ router.get('/',(req,res)=>{
             router.post('/',(req,res)=>{
                 let user= new User(req.body.name,req.body.password,req.body.email,req.body.phone,req.body.create_time,req.body.update_time);
                 req.session.user=user;
-                connection.query("insert into user(name,password,email,phone,create_time,update_time) value(?,?,?,?,?,?)",[req.body.name,req.body.password,req.body.email,req.body.phone,req.body.create_time,req.body.update_time],function(err,b,fields){
+                connection.query("select *from user ",function(err,b,fields){
                     res.redirect('Login'); 
-                 }); 
-                //  res.redirect('Login');
-                });
+                 }); })
+                 router.post('/person_add',(req,res)=>{
+                    connection.query("insert into user(name,password,email,phone,create_time,update_time)   value(?,?,?,?,?,?)",[req.body.name,req.body.password,req.body.email,req.body.phone,req.body.create_time,req.body.update_time],function(err,c,firlds){
+                      res.redirect('/person');      
+                      });
+                    });
+                
+                
         
 
   

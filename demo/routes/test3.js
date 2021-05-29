@@ -27,21 +27,37 @@ router.post('/',(req,res)=>{
 });
 
 
-// sql 删除
+// sql 删除 book
 router.get('/delete/:id',(req,res)=>{
 let sql=`delete from book where id=${req.params.id}`; 
     connection.query(sql,function(err,b,fields){
         res.redirect('/');
     })
 });
+// sql 删除 user
+router.get('/delete1/:id',(req,res)=>{
+    let sql=`delete from user where id=${req.params.id}`; 
+        connection.query(sql,function(err,b,fields){
+            res.redirect('/person');
+        })
+    });
 
 
-// sql 修改
+// sql 修改 book
 router.get('/update/:id',(req,res)=>{
         res.render('add1',{
-        obj:data[req.params.id], 
+        obj:data[req.params.id],  
         id:req.params.id})
+});
+
+// sql 修改 user
+router.get('/update1/:id',(req,res)=>{
+    res.render('add1',{
+    obj:data[req.params.id], 
+    id:req.params.id})
 }); 
+
+
 
 
 

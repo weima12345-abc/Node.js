@@ -5,4 +5,8 @@ router.get('/',(req,res)=>{
     id:""});
 });
 
+router.get('/person_add',(req,res)=>{
+  res.render('person_add',{obj:{},id:""});
+});
+
   module.exports=router;
