@@ -14,10 +14,11 @@
     "express": "~4.16.1",
     "express-art-template": "^1.0.1",
     "express-session": "1.17.1",
+    "fs": " 0.0.1-security",
     "http-errors": "~1.6.3",
+    "mongodb": "3.6.6",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
-    "mongodb": "3.6.6",
-    "fs": " 0.0.1-security"
+    "vueup": "^1.3.0"
   }
 }

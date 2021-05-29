@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+</head>
+<body>
+
+ <div class="all">后台管理系统</div>
+ 
+ <span class="bn1">
+    <button type="submit" class="b" onclick="search()">查询</button>
+ 
+    
+   
+    <a class="io" id="clearAll"href="" onclick="aob()">清空</a>
+</span>
+            <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
+        
+        
+                <div class="f">
+                <div class="d">
+                 <a href="/dtxr" class="pp"><button class="e"onclick="add()">+ 添加</button></a> 
+             
+               </div>
+                </div>
+               <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color= black,strength=10)" width="90%" color=black SIZE=1>
+       
+       <div class="all1" style="color: red;">
+        <div class="ad">
+<table class="ui" id="er">
+    <thead>
+
+<tr >
+    <th class="q">name</th>
+    <th class="q">password</th>
+    <th class="q">email</th>
+    <th class="w">phone</th>
+    <th class="y">create_time</th> 
+    <th class="t">update_time</th>
+</tr>
+	<tbody class="show1" >
+			<% detail.forEach((d,i)=>{ %>
+            <tr>
+				<td><%=d.name %></td>
+				<td><%=d.password %></td>
+				<td><%=d.email %></td>
+				<td><%=d.phone %></td>
+				<td><%=d.create_time %></td>
+                <td><%=d.update_time %></td>
+				<td class="j">
+					<button class="i" data-id=<%=i %>>修改</button></a>
+					<button class="o" data-id=<%=i %>>删除</button>   
+				<span class="upBtn"></span><span class="downBtn"></td>
+			</tr>
+		
+		<%})  %>
+			
+			
+		
+		</tbody>
+</table>
+        </div>
+       </div>
+      
+        
+    
+
+  </body>
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+  <script src="/javascripts/jquery-3.5.1.js"></script>
+<script src="/javascripts/jq_test.js"></script>
+<script src="/javascripts/Table.js"></script>
+</html> 

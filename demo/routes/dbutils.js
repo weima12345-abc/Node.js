@@ -13,7 +13,7 @@ router.post('/',(req,res)=>{
 // sql 修改
 
 
-  connection.query("update  book set id=?,编号=?,名称=?,作者=?,分类=?,描述=? where id=?",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.id],function(err,c,firlds){
+  connection.query("update  book set id=?,编号=?,名称=?,作者=?,分类=?,描述=? where 编号=?",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.编号],function(err,c,firlds){
     res.redirect('/');     
     });
   });

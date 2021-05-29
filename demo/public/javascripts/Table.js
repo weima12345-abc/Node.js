@@ -40,6 +40,10 @@ function desOrder() {
 			}
 		}
 }
+//注册
+function zc(){
+	window.location.href='/zc';
+}
 //删除
 Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(){
 	
@@ -85,7 +89,10 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(){
 	let index=	this.getAttribute("data-id");
 	window.location.href='/update/'+index;
+	// window.location.href='/update/:id'+index;
+
 	});
+//查询	
 	function search(){
 		window.location.href='/e';
 	}
