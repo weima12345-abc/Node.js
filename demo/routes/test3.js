@@ -19,7 +19,7 @@ router.get('/',(req,res)=>{
 });
 
 
-// sql 新增
+// sql 新增 book
 router.post('/',(req,res)=>{
     connection.query("insert into book(id,编号,名称,作者,分类,描述) value(?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述],function(err,b,fields){
        res.redirect('/'); 
@@ -34,13 +34,7 @@ let sql=`delete from book where id=${req.params.id}`;
         res.redirect('/');
     })
 });
-// sql 删除 user
-router.get('/delete1/:id',(req,res)=>{
-    let sql=`delete from user where id=${req.params.id}`; 
-        connection.query(sql,function(err,b,fields){
-            res.redirect('/person');
-        })
-    });
+
 
 
 // sql 修改 book
@@ -50,12 +44,11 @@ router.get('/update/:id',(req,res)=>{
         id:req.params.id})
 });
 
-// sql 修改 user
-router.get('/update1/:id',(req,res)=>{
-    res.render('add1',{
-    obj:data[req.params.id], 
-    id:req.params.id})
-}); 
+// // sql 修改 user
+// router.get('/update1/:id',(req,res)=>{
+//     res.render('Login')
+ 
+// });  
 
 
 

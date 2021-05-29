@@ -30,7 +30,7 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 	  }
 	  ); 
 	  let index=	this.getAttribute("data-id");
-	  window.location.href='/delete1/'+index;
+	  window.location.href='/person/delete1/'+index;
 
 	} else {
 	  swal("Your imaginary file is safe!");
@@ -41,11 +41,11 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 //修改
 Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(){
 	let index=	this.getAttribute("data-id");
-	window.location.href='/update1/'+index;
-	// window.location.href='/update/:id'+index;
+	window.location.href='/person/update1/'+index;
+
 
 	});
-//查询	
-	function search(){
-		window.location.href='/e';
-	}
+// //查询	
+// 	function search(){
+// 		window.location.href='/e';
+// 	}
