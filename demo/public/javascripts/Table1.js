@@ -45,7 +45,7 @@ Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(
 
 
 	});
-// //查询	
-// 	function search(){
-// 		window.location.href='/e';
-// 	}
+//查询	
+	function search(){
+		window.location.href='/e/search_user';
+	}

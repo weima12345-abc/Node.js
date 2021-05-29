@@ -12,10 +12,14 @@ router.post('/',(req,res)=>{
   connection.query(sql,function(err,a,fields){
   res.render('test3',{detail:a});
   })
-
-    
-    
-
 });
 
+
+router.post('/user',(req,res)=>{
+
+  let sql=`select * from user where name like '${req.body.name}%' or email like '${req.body.email}%' or phone like '${req.body.phone}%' `;
+  connection.query(sql,function(err,a,fields){
+  res.render('person',{detail:a});
+  })
+})
 module.exports=router;
