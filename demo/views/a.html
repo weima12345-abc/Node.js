@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div_page2">
+        <ul class="change" id="pagelist">
+            <%if(pagenum == Math.ceil((departmentList[0]["count"]/5))){%>
+                <li class="pageChange"><a href="" disabled="true">下一页</a></li>
+            <%}else{%>
+                <li class="pageChange"><a href="/departlist?page=<%= parseInt(pagenum) + 1%>">下一页</a></li>
+            <%}%>
+            <%for(var i = Math.ceil((departmentList[0]["count"]/5)); i >=1 ; i-- ){%>
+            <%if(i == pagenum){%>
+                <li class="page current"><a href="/departlist?page=<%= i%>"><%= i %></a></li>
+            <%}else{%>
+                <li class="page"><a href="/departlist?page=<%= i%>"><%= i %></a></li>
+            <%}%>
+            <%}%>
+            <%if(pagenum == 1){%>
+                <li class="pageChange"><a href="" disabled="true">上一页</a></li>
+            <%}else{%>
+                <li class="pageChange"><a href="/ ?page=<%= parseInt(pagenum) - 1%>">上一页</a></li>
+            <%}%>
+        </ul>
+    </div>
+
+</body>
+</html>

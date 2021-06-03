@@ -7,20 +7,16 @@ router.get('/', (req, res)=> {
 }); 
  
 
-router.post('/',(req,res)=>{
+router.post('/',(req,res)=>{ 
+   // 设置路由拦截器
   exports.checkAuth=function(req, res, next) {
     var token = req.signedCookies.token;
     if (token && req.session.user && req.session.user.token === token)
         next();
     else if (token) {
-        //if invalid token or no session, should rebuild
-        var authInfo = user.getAuthInfo(token);
+        var authInfo = user.getAuthInfo(token);//读取用户信息
         if (authInfo && authInfo.isAuth) {
             req.session.user = {
-                // userID: authInfo.userID,
-                // userName: authInfo.userName,
-                // isAuth: authInfo.isAuth,
-                // token: token
                 name:authInfo.name,
                 password:authInfo.password
             }
@@ -29,10 +25,10 @@ router.post('/',(req,res)=>{
         } else
             res.redirect('/Login');
     } else
-        // res.redirect('/Login');
-        res.send("上单");
+        res.redirect('/Login');
+       
   }
-  
+  //md5 前端加密
  let name= req.body.name;
  let password=req.body.password;
 var hash=crypto.createHash('md5');
@@ -40,31 +36,13 @@ var hash1=crypto.createHash('md5');
 hash.update(password);
 password=hash.digest('hex');
  if(req.session.user !=undefined&& name==req.session.user.name&&hash1.update(req.session.user.password).digest('hex')==password){
-   res.redirect('/'); 
+   res.redirect('/');  
  }else{
   // history.back();
-  // window.location.href='/asd';
   res.redirect('/Login');
 
 
- // 设置路由拦截器
-// Vue.mixin({
-//   beforeRouteLeave(to, from, next) {
-//     if(this.interceptRouter){
-//       next((()=>{
-//         MessageBox.confirm('你可能有修改未提交，确定返回上级页面？').then(()=>{
-//           this.interceptRouter = false;
-//           this.$router.go(-1)
-//         }).catch(()=>{
-          
-//         })
-//         return false;
-//       })())
-//     }else{
-//       next()
-//     }
-//   }
-// })
+ 
   
 
  }

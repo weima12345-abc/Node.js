@@ -8,7 +8,15 @@
 <!-- <link rel="stylesheet" href="../public/stylesheets/zc.css"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
 <title>注册页面</title>
+<script>
+  addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+  }, false);
 
+  function hideURLbar() {
+    window.scrollTo(0, 1);
+  }
+</script>
 </head>
 <style>
   
@@ -66,29 +74,33 @@ body{
       
         <h1>注册</h1>
         <div class="form">
+          <div class="item">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <input type="text"name="id" placeholder="UserID" required="">
+        </div>
             <div class="item">
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                <input type="text"name="name" placeholder="Username">
+                <input type="text"name="name" placeholder="Username"required="">
             </div>
             <div class="item">
                 <i class="fa fa-key" aria-hidden="true"></i>
-                <input type="text"name="password" placeholder="Password">
+                <input type="text"name="password" placeholder="Password"required="">
             </div>
             <div class="item">
               <i class="fa fa-key" aria-hidden="true"></i>
-              <input type="text"name="email" placeholder="email">
+              <input type="text"name="email" placeholder="email"required="">
           </div>
           <div class="item">
             <i class="fa fa-key" aria-hidden="true"></i>
-            <input type="text"name="phone" placeholder="phone">
+            <input type="text"name="phone" placeholder="phone"required="">
         </div>
         <div class="item">
           <i class="fa fa-key" aria-hidden="true"></i>
-          <input type="text"name="create_time" placeholder="create_time">
+          <input type="text"name="create_time" placeholder="create_time"required="">
       </div>
       <div class="item">
         <i class="fa fa-key" aria-hidden="true"></i>
-        <input type="text"name="update_time" placeholder="update_time">
+        <input type="text"name="update_time" placeholder="update_time"required="">
     </div>
         </div>
         <button>Register</button>

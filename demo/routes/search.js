@@ -21,5 +21,6 @@ router.post('/user',(req,res)=>{
   connection.query(sql,function(err,a,fields){
   res.render('person',{detail:a});
   })
+ 
 })
 module.exports=router;

@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/add.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/add1.css">
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
     
     
      <!-- <link rel="icon" href="data:image/ico;base64,aWNv">
@@ -15,25 +24,25 @@
           <div class="changes" id="changes">
     <form action="/c/person_add" method="POST">
                 <span>书籍 id：</span>
-                <input type="number" name="id" value="<%=id %>">
+                <input type="number" name="id" value="<%=id %>"required="">
               
-                <span>name ：</span>
-                <input type="text" name="name" value="<%=obj.name %>"placeholder="请输入名字"class="change" >
+                <span>na me  ：</span>
+                <input type="text" name="name" value="<%=obj.name %>"placeholder="请输入名字"class="change"required="" >
             
-                <span>password：</span>
-                <input type="text"   name="password" value="<%=obj.password %>" placeholder="请输入数学成绩" class="change">
+               <span>password：</span>
+                <input type="text"   name="password" value="<%=obj.password %>" placeholder="请输入数学成绩" class="change"required="">
 
                 <span>email：</span>
-                <input type="text"   name="email" value="<%=obj.email %>" placeholder="请输入英语成绩" class="change">
+                <input type="text"   name="email" value="<%=obj.email %>" placeholder="请输入英语成绩" class="change"required="">
           
                 <span>phone：</span>
-                <input type="text"   name="phone" value="<%=obj.phone %>" placeholder="请输入总成绩" class="change"> 
+                <input type="text"   name="phone" value="<%=obj.phone %>" placeholder="请输入总成绩" class="change"required=""> 
            
                 <span>create_time：</span>
-                <input type="text"   name="create_time" value="<%=obj.create_time %>" placeholder="请输入总成绩" class="change"> 
+                <input type="text"   name="create_time" value="<%=obj.create_time %>" placeholder="请输入总成绩" class="change"required=""> 
            
                 <span>update_time：</span>
-                <input type="text"   name="update_time" value="<%=obj.update_time %>" placeholder="请输入总成绩" class="change"> 
+                <input type="text"   name="update_time" value="<%=obj.update_time %>" placeholder="请输入总成绩" class="change"required=""> 
                 <input type="submit" value="提交">  
             </form>
         </div> 

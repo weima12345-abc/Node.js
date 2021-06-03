@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
     
     
      <!-- <link rel="icon" href="data:image/ico;base64,aWNv">
@@ -16,9 +25,9 @@
     <form action="/d" method="POST">
         <div id="first" class="first">
             <span class="a">书籍名称:</span>
-            <input placeholder="请输入英雄名称" name="名称" >
+            <input placeholder="请输入英雄名称" name="名称"required="" >
              <span class="a">作者:</span>
-             <input placeholder="位置" list="test" name="作者">
+             <input placeholder="位置" list="test" name="作者"required="">
              <datalist id="test">
                 <option>1</option>
                 <option>2</option>
@@ -27,7 +36,7 @@
                 <option>5</option>
             </datalist>
                 <span class="a">书籍类型:</span> 
-                <input placeholder="请选择" list="test1" name="分类">
+                <input placeholder="请选择" list="test1" name="分类"required="">
                 <datalist id="test1">
                     <option>小说</option>
                     <option>文学</option>

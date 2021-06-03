@@ -95,5 +95,9 @@ Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(
 	function search(){
 		window.location.href='/e';
 	}
+//分页
+function next(){
+	window.location.href='/next'
+}
 
 	

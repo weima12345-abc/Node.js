@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
     
     
      <!-- <link rel="icon" href="data:image/ico;base64,aWNv">
@@ -16,12 +25,12 @@
     <form action="/d/user" method="POST">
         <div id="first" class="first">
             <span class="a">name:</span>
-            <input placeholder="请输入用户名字" name="name" >
+            <input placeholder="请输入用户名字" name="name" required="">
              <span class="a">email:</span>
-             <input placeholder="请输入用户邮箱" name="email">
+             <input placeholder="请输入用户邮箱" name="email" required="">
          
                 <span class="a">phone:</span> 
-                <input placeholder="请输入用户电话" name="phone">
+                <input placeholder="请输入用户电话" name="phone" required="">
                 
             <a class="bn">
                 <button type="submit" class="b" onclick="search()">查询</button>
