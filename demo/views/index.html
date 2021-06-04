@@ -128,9 +128,10 @@
       <!--Section: Cards-->
       <section class="text-center">
 
+<h2><span>图书库</spann></h2>
         <!--Grid row-->
         <div class="row mb-4 wow fadeIn">
-<tbody></tbody>
+<tbody>
 <% detail.forEach((d,i)=>{ %>
           <!--Grid column-->
           <div class="col-lg-4 col-md-12 mb-4">
@@ -151,10 +152,17 @@
               <div class="card-body">
                 <!--Title--> 
                 <form action="/indent" method="POST">
-                <input class="card-title" name="名称" style="text-align: center;" value="<%=d.名称 %>">
+                <span>书籍名称:</span>
+               
+                <input class="card-title" name="名称" style="border: 0;" value="<%=d.名称 %>">
                 <!--Text-->
-                <input class="card-title" name="描述"style="text-align: center;" value="<%=d.描述 %>">
-                <input type="submit" value="Start looking and detail">
+               <br>
+                <span>书籍内容:</span>
+                <input class="card-title" name="描述" style="border:0" value="<%=d.描述 %>">
+                <br>
+                <span>书籍价格:4$</span>
+
+                <input  class="btn btn-primary btn-md" type="submit" value="Start looking and detail">
                 <!-- <a target="_blank" type="submit" 
                   class="btn btn-primary btn-md">Start looking and detail
                   <i class="fas fa-play ml-2"></i>
@@ -215,7 +223,67 @@
     </div>
   </main>
   <!--Main layout-->
+  <hr class="my-5">
 
+      <!--Section: Cards-->
+      <section class="text-center">
+
+<h2><span>订单</spann></h2>
+        <!--Grid row-->
+        <div class="row mb-4 wow fadeIn">
+<tbody>
+   
+<% detail.forEach((d,i)=>{ %>
+  <div class="col-lg-4 col-md-12 mb-4">
+
+    <!--Card-->
+    <div class="card">
+
+      <!--Card image-->
+      <div class="view overlay">
+          <img src="img/p5.jpg" class="card-img-top"
+          alt="">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+        <!--Title--> 
+        <form action="/indent" method="POST">
+        <span>借书人姓名:</span>
+       
+        <input class="card-title" name="名称" style="border: 0;" value="<%=d.姓名 %>" >
+        <!--Text-->
+       <br>
+        <span>结束人年龄:</span>
+        <input class="card-title" name="描述" style="border:0" value="<%=d.年龄 %>">
+        <br>
+        <span>书籍名称:</span>
+        <input class="card-title" name="描述" style="border:0" value="<%=d.书籍名称 %>">
+        <br>
+       
+        <span>书籍价格:4$</span>
+
+        <input  class="btn btn-primary btn-md" type="submit" value="Start looking and detail">
+        <!-- <a target="_blank" type="submit" 
+          class="btn btn-primary btn-md">Start looking and detail
+          <i class="fas fa-play ml-2"></i>
+        </a> -->
+       
+          
+        </form>
+      </div>
+
+    </div>
+    <!-- /.Card -->
+
+  </div>
+  <%})  %>
+</tbody>
+</div>
+</section>
   <!--Footer-->
   <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
 

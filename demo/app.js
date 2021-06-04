@@ -10,6 +10,7 @@ var LoginRouter=require('./routes/relogin');
 var personRouter = require('./routes/person');
 var zcRouter = require('./routes/zc1');
 var dtxrRouter=require('./routes/dtxr');
+var ind4Router=require('./routes/index2');
 var ind3Router=require('./routes/moudle_search');
 var ind2Router=require('./routes/search');
 var ind1Router=require('./routes/dbutils');
@@ -17,6 +18,8 @@ var indRouter=require('./routes/index');
 var test3Router=require('./routes/test3');
 var f=require('./routes/dtxr');
 var indentRouter=require('./routes/index1'); 
+var someindentRouter=require('./routes/someindent');
+var sail=require('./routes/sail');
 var app = express();
 
 
@@ -53,9 +56,12 @@ app.use('/e',ind3Router);
 app.use('/d',ind2Router); 
 app.use('/c',ind1Router);
 app.use('/b',indRouter);
+app.use('/b',sail);
 app.use('/',test3Router);
 app.use('/f',f);
+app.use('/g',ind4Router);
 app.use('/indent',indentRouter);
+app.use('/someindent',someindentRouter)
 
 module.exports = function (app) {
   app.get('/user/blogList',pageAdmin.checkAuth, pageAdmin.pageList);

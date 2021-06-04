@@ -21,7 +21,7 @@ router.get('/',(req,res)=>{
 
 // sql 新增 book
 router.post('/',(req,res)=>{
-    connection.query("insert into book(id,编号,名称,作者,分类,描述) value(?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述],function(err,b,fields){
+    connection.query("insert into book(id,编号,名称,作者,分类,描述,价格) value(?,?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格],function(err,b,fields){
        res.redirect('/'); 
     });
 });

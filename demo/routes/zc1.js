@@ -3,7 +3,7 @@ var router = express.Router();
 let User=require('./bean/user');
 /* GET home page. */
 router.get('/', (req, res)=> {
-  res.render('zc');
+  res.render('a');
 }); 
 // router.post('/',(req,res)=>{
 // let user= new User(req.body.name,req.body.password,req.body.email,req.body.phone,req.body.create_time,req.body.update_time);

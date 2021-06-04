@@ -23,7 +23,48 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
 <!-- Fonts -->
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,400,700'>
+<style type="text/css">
+	body{
+		margin: 0px;
+	}
+	.zhezhao{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		background: #000;
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+	}
+	.tankuang{
+		position: relative;
+		background: #fff;
+		width: 50%;
+		height: 80%;
+		border-radius: 5px;
+		margin: 5% auto;
+	}
+	#header{
+		height: 40px;
+	}
+	#header-right{
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		border-radius: 5px;
+		background: red;
+		color: #fff;
+		right: 5px;
+		top: 5px;
+		text-align: center;	}
+    .zl{
+	height: 35px;
+    width: 180px;
+    margin-top: 45px;
+    margin-left: 45px;
+		}
 
+</style>
 </head>	
 <body>   
 
@@ -96,7 +137,7 @@
 					<td><%=d.分类 %></td>
 					<td><%=d.描述 %></td>
 					<td class="j">
-						<button class="i" data-id=<%=i %>> 租赁 </button></a>
+						<button onclick="zl()" class="z" data-id=<%=i %>> 租赁 </button></a>
 						<!-- <button class="o" data-id=<%=i %>>删除</button>    -->
 					<span class="upBtn"></span><span class="downBtn"></td>
 				</tr>
@@ -112,66 +153,27 @@
 			</div>
 			
 		   </div>
-		  
-			
-<!-- <% detail.forEach(d=>{ %> -->
-		<!-- <div class="services-content page">
+		   <!-- <button type="button" onclick="dianwo()">点我</button> -->
+		   <div class="zhezhao" id='zhezhao'>
+			   <div class="tankuang">
+				   <div id="header">
+					   <form action="/someindent" method="POST">
+					   <input class="zl"type="text" name="姓名" placeholder="姓名">
+					   <input class="zl"type="text"name="年龄" placeholder="年龄">
+					   <input class="zl"type="text" name="手机号" placeholder="手机号">
+					   <input class="zl"type="text" name="邮箱" placeholder="邮箱">
+					   <input class="zl"type="text" name="书籍名称" placeholder="书籍名称">
+					   <input class="zl"type="text" name="初始时间" placeholder="初始时间">
+					   <input class="zl"type="text" name="截至时间" placeholder="截至时间">
+					   <input class="zl"type="text" name="书籍状态" placeholder="书籍状态">
+					   <input class="zl"type="submit" value="租赁">
+				   </form>
+					   <div id="header-right" onclick="hidder()">x</div>
+				   </div>
+			   </div>
+		   </div> 
 			
 
-			<div class="col services-design"
-				data-600="-webkit-transform: translateY(10px); opacity:0;"
-				data-800="-webkit-transform: translateY(0px); opacity:1;"
-			> -->
-				<!-- <span class="icon-design"></span> -->
-
-				<!-- <tr>
-					<td><%=d.编号 %></td>
-					<td><%=d.名称 %></td>
-					<td><%=d.作者 %></td>
-					<td><%=d.分类 %></td>
-					<td><%=d.描述 %></td>
-				</tr> -->
-				<!-- <ul>
-					<li><%=d.编号 %></li>
-					<li><%=d.名称 %></li>
-					<li><%=d.作者 %></li>
-					<li><%=d.分类 %></li>
-					<li><%=d.描述 %></li>
-				</ul> -->
-			
-			<!-- </div> -->
-			
-			
-			<!-- <div class="col services-frontend"
-				data-600="-webkit-transform: translateY(50px); opacity:0;"
-				data-800="-webkit-transform: translateY(0px); opacity:1;"
-			>
-				<span class="icon-computer"></span>
-				<ul>
-					<li>Frontend Development</li>
-					<li>HTML5 / CSS3</li>
-					<li>jQuery & JavaScript libraries</li>
-					<li>Responsive Design</li>
-					<li>Sass</li>
-					<li>Git / SVN</li>
-				</ul>
-			</div>
-			<div class="col services-team"
-				data-600="-webkit-transform: translateY(100px); opacity:0;"
-				data-800="-webkit-transform: translateY(0px); opacity:1;"
-			>
-				<span class="icon-music"></span>
-				<ul>
-					<li>Team Building</li>
-					<li>Smiling</li>
-					<li>Communication</li>
-					<li>Team working</li>
-					<li>Sharing my music</li>
-					<li>...and more!</li>
-				</ul>
-			</div> -->
-		<!-- </div> -->
-		<!-- <%})  %> -->
 	</section>
 
 	<hr>
@@ -310,6 +312,16 @@
 <script src="/javascripts/js2/modernizr-2.6.2.min.js"></script>
 <script src="/javascripts/js2/skrollr.js"></script>
 <script src="/javascripts/js2/main.js"></script>
+<script src="/javascripts/Table.js"></script>
+<script type="text/javascript">
+	document.getElementById('zhezhao').style.display="none";
+	function dianwo(){
+		document.getElementById('zhezhao').style.display="";
+	}
+	function hidder(){
+		document.getElementById('zhezhao').style.display="none";
+	}
+</script>
 
 </body>
 

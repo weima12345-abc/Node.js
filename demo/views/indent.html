@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5全屏图片左右滑动轮播代码 - 站长素材</title>
+
+<link type="text/css" href="/stylesheets/css4/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<script src="/javascripts/js4/polyfill.min.js"></script>
+
+<div id="hero-slides">
+
+  <div id="header">
+    <div id="logo"></div>
+    <div id="menu">
+      <div id="hamburger">
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="slides-cont">
+    <div class="button" id="next"></div>
+    <div class="button" id="prev"></div>
+    <div id="slides">
+      <div class="slide" style="background-image: url(/images/img4/1.jpg);">
+        <div class="number">01</div>
+        <div class="body">
+          <div class="location">Shibuya, Japan</div>
+          <div class="headline">Photo by Benjamin Hung</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide"style="background-image: url(/images/img4/2.jpg);">
+        <div class="number">02</div>
+        <div class="body">
+          <div class="location">Mong Kok, Hong Kong</div>
+          <div class="headline">Photo by Ryan Tang</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url(/images/img4/3.jpg);">
+        <div class="number">03</div>
+        <div class="body">
+          <div class="location">Incheon, South Korea</div>
+          <div class="headline">Photo by Steve Roe</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url(/images/img4/4.jpg);">
+        <div class="number">04</div>
+        <div class="body">
+          <div class="location">Wan Chai, Hong Kong</div>
+          <div class="headline">Photo by Sean Foley</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url(/images/img4/5.jpg);">
+        <div class="number">05</div>
+        <div class="body">
+          <div class="location">Shibuya-ku, Japan</div>
+          <div class="headline">Photo by Alex Knight</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url(/images/img4/6.jpg);">
+        <div class="number">06</div>
+        <div class="body">
+          <div class="location">Tokyo, Japan</div>
+          <div class="headline">Photo by Benjamin Hung</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url(/images/img4/1.jpg);">
+        <div class="number">07</div>
+        <div class="body">
+          <div class="location">Taipei City, Taiwan</div>
+          <div class="headline">Photo by Jesus In Taiwan</div><a href="#">
+            <div class="link">View on Unsplash</div></a>
+        </div>
+      </div>
+    </div>
+    <div id="next-catch"></div>
+    <div id="prev-catch"></div>
+  </div>
+  
+</div>
+
+<script>
+let hero = document.getElementById('hero-slides');
+let menu = document.getElementById('menu');
+let slides = document.getElementById('slides');
+let next = [ 'next', 'next-catch' ].map(n => document.getElementById(n));
+let prev = [ 'prev', 'prev-catch' ].map(n => document.getElementById(n));
+let slideChildren = slides.children;
+let slideCount = slides.children.length;
+let currentlyDemoing = false;
+let currentPage = 0;
+let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 3 : 2;
+let maxPageCount = () => slideCount / slidesPerPage() - 1;
+
+function goToPage(pageNumber = 0) {
+	currentPage = Math.min(maxPageCount(), Math.max(0, pageNumber));
+	console.log(currentPage);
+	hero.style.setProperty('--page', currentPage);
+}
+
+function sleep(time) {
+	return new Promise(res => setTimeout(res, time));
+}
+
+function hoverSlide(index) {
+	index in slideChildren &&
+		slideChildren[index].classList.add('hover');
+}
+
+function unhoverSlide(index) {
+	index in slideChildren &&
+		slideChildren[index].classList.remove('hover');
+}
+
+async function demo() {
+	if(currentlyDemoing) {
+		return;
+	}
+	currentlyDemoing = true;
+	if(currentPage !== 0) {
+		goToPage(0);
+		await sleep(800);
+	}
+	let slides = slidesPerPage();
+	let pageSeq_ = { 2: [ 1, 2, 1 ], 3: [ 1, 2, 1 / 3 ], 4: [ 1, 1, 0 ] };
+	let pageSeq = pageSeq_[slides] || pageSeq_[4];
+	let slideSeq_ = { 2: [ 2, 4, 3 ], 3: [ 3, 6, 2 ], 4: [ 3, 6, 2 ] };
+	let slideSeq = slideSeq_[slides] || slideSeq_[2];
+	await sleep(300);
+	goToPage(pageSeq[0]);
+	await sleep(500);
+	hoverSlide(slideSeq[0]);
+	await sleep(1200);
+	goToPage(pageSeq[1]);
+	unhoverSlide(slideSeq[0]);
+	await sleep(500);
+	hoverSlide(slideSeq[1]);
+	await sleep(1200);
+	goToPage(pageSeq[2]);
+	unhoverSlide(slideSeq[1]);
+	await sleep(300);
+	hoverSlide(slideSeq[2]);
+	await sleep(1600);
+	goToPage(0);
+	unhoverSlide(slideSeq[2]);
+	currentlyDemoing = false;
+}
+
+next.forEach(n => n.addEventListener('click', () => !currentlyDemoing && goToPage(currentPage + 1)));
+prev.forEach(n => n.addEventListener('click', () => !currentlyDemoing && goToPage(currentPage - 1)));
+menu.addEventListener('click', demo);
+
+sleep(100).then(demo);
+
+// window.addEventListener('resize', () => {
+	// console.log(document.body.style.getPropertyValue('--slide-per-page'));
+// });
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

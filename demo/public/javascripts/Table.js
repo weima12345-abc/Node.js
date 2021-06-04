@@ -99,5 +99,16 @@ Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(
 function next(){
 	window.location.href='/next'
 }
+//租赁
+// Array.from( document.getElementsByClassName("z")).forEach(i=>i.onclick=function(){
+// window.location.href='/someindent';
 
+// 	});
+document.getElementById('zhezhao').style.display="none";
+function zl(){
+	document.getElementById('zhezhao').style.display="";
+}
+function hidder(){
+	document.getElementById('zhezhao').style.display="none";
+}
 	

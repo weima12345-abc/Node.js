@@ -1,71 +1,362 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>login</title>
+﻿<!doctype html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
-</head>
- 
-<body>
+		<!-- Title -->
+		<title>Authentication</title>
 
-<div class="header" id="head">
-  <div class="title">hhh人事管理系统
-	  <img src="/images/background.jpg" class="mn">
-  </div>
-	
-</div>
+		<!-- Favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-<div class="wrap" id="wrap">
-	<div class="logGet">
-			<!-- 头部提示信息 -->
-			 <div class="logD logDtip">
-				<p class="p1">登录</p>
-			</div> 
-			 <!-- 输入框 -->
-			<form action="/login" method="POST">
-			<div class="lgD">
-				<img src="/images/logName.png" width="20" height="20" alt=""/>
-				<input type="text" name="name" placeholder="输入用户名" />
-			</div> 
-			<div class="lgD">
-				<img src="/images/logPwd.png" width="20" height="20" alt=""/>
-				<input type="text" name="password" placeholder="输入用户密码" />
+		<!-- Include CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.theme.css">
+		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.transitions.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
+
+	</head>
+
+	<body>
+         
+
+
+		<!-- Loader -->
+		<div id="loader" class="loader">
+			<div class="loader-content">
+				<img src="images/loader.png" alt="Loading...">
 			</div>
-		
-			<div class="logC" style="height: 100px;">
-				
-			<input type="submit" value="登录">
-			<a href="/zc" target="_self" class="l">注册</a>
-			
-			</div>
-			
-			
-		</form>
 		</div>
-</div>
 
-<div class="footer" id="foot">
-  <div class="copyright">
-    <p>Copyright © 2018 Qunar.com Inc. All Rights Reserved.</p>
-    <div class="img">
-		<i class="icon"></i><span>联系邮箱：jiankangsun@yahoo.com</span>
-	</div>
-	
-	<div class="img">
-		<i class="icon1"></i><span>联系地址：江西软件职业技术大学</span>
-	</div>
-	  
-	<div class="img">
-	  <i class="icon2"></i><span>联系电话：18355042634</span>
-	</div>
- 
- 
-  </div>
-	
-</div>
-	
-	
-</body>
+		<!-- Header container -->
+		<div class="header-bg">
+			<!-- Container -->
+			<div class="container">
+
+				<div class="row flex">
+					<!-- Logo column -->
+					<div class="col-xs-12 col-sm-5 col-md-4 flex">
+						<a href="index.html">
+							<!-- Logo -->
+							<img src="images/logo.png" class="logo img-responsive" alt="PhotoMarket">
+						</a>
+					</div>
+
+					<!-- Menu column -->
+					<div class="col-xs-12 col-sm-7 col-md-8 flex flex-center">
+						<!-- Menu -->
+						<ul class="nav nav-pills">
+							<li role="presentation"><a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge">4</span></a></li>
+							<li role="presentation"><a href="#">Log out</a></li>
+							<li role="presentation"><a href="account.html">Your Account</a></li>
+							<li role="presentation"><a href="login.html"><b>Welcome,</b> <span>log in</span></a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Shopping cart -->
+				<div class="container absolute cart-container">
+					<div class="shopping-cart">
+						<!-- Shopping cart header -->
+						<div class="shopping-cart-header">
+							<!-- Total products in cart -->
+							<i class="fa fa-shopping-cart cart-icon"></i><span class="badge">4</span>
+							<!-- Total cart -->
+							<div class="shopping-cart-total">
+								<span class="lighter-text">Total:</span>
+								<span class="main-color-text">$34.98</span>
+							</div>
+						</div>
+						<!-- Shopping cart items -->
+						<ul class="shopping-cart-items">
+							<!-- Shopping cart item -->
+							<li class="clearfix">
+								<!-- Item photo -->
+								<img src="images/cart-images/1.jpg" width="70" alt="item1" />
+								<!-- Item Name -->
+								<span class="item-name">Rails</span>
+								<!-- Item Price -->
+								<span class="item-price">$19.99</span>
+								<!-- Item Quantity -->
+								<span class="item-quantity">Quantity: 01</span>
+							</li>
+							<!-- Shopping cart item -->
+							<li class="clearfix">
+								<!-- Item photo -->
+								<img src="images/cart-images/2.jpg" width="70" alt="item2" />
+								<!-- Item Name -->
+								<span class="item-name">Forest leaves</span>
+								<!-- Item Price -->
+								<span class="item-price">$9.99</span>
+								<!-- Item Quantity -->
+								<span class="item-quantity">Quantity: 01</span>
+							</li>
+							<!-- Shopping cart item -->
+							<li class="clearfix">
+								<!-- Item photo -->
+								<img src="images/cart-images/3.jpeg.jpg" width="70" alt="item3" />
+								<!-- Item Name -->
+								<span class="item-name">The tiger</span>
+								<!-- Item Price -->
+								<span class="item-price">$5.00</span>
+								<!-- Item Quantity -->
+								<span class="item-quantity">Quantity: 01</span>
+							</li>
+							<!-- Shopping cart item -->
+							<li class="clearfix">
+								<!-- Item photo -->
+								<img src="images/cart-images/4.jpeg.jpg" width="70" alt="item4" />
+								<!-- Item Name -->
+								<span class="item-name">Flowers</span>
+								<!-- Item Price -->
+								<span class="item-price">FREE</span>
+								<!-- Item Quantity -->
+								<span class="item-quantity">Quantity: 01</span>
+							</li>
+						</ul>
+						<!-- Checkout button -->
+						<a href="checkout.html" class="button">Checkout</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page container -->
+		<div class="inner-content">
+			<div class="container">
+
+				<!-- Breadcrumb -->
+				<div class="row">
+					<div class="col-sm-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">
+								Authentication
+							</li>
+						</ol>
+					</div>
+				</div>
+
+				<!-- Content & sidebar -->
+				<div class="row">
+
+					<!-- content -->
+					<div class="col-sm-8 col-md-9">
+
+						<div class="row">
+							<div class="col-sm-6">
+								<h4 class="title">
+									Create your account
+								</h4>
+								<div class="line-dec"></div>
+								<form>
+									<div class="form-group">
+										<label for="name">Name</label>
+										<input type="text" class="form-control" id="name" placeholder="Your name">
+									</div>
+									<div class="form-group">
+										<label for="lastname">Last name</label>
+										<input type="text" class="form-control" id="lastname" placeholder="Your last name">
+									</div>
+									<div class="form-group">
+										<label for="email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Your email">
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" class="form-control" id="password" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<label for="passwordRepeat">Repeat password</label>
+										<input type="password" class="form-control" id="passwordRepeat" placeholder="Repeat your password">
+									</div>
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</form>
+							</div>
+
+							<div class="col-sm-6">
+								<h4 class="title">
+									Already registered?
+								</h4>
+								<div class="line-dec"></div>
+								<form>
+									<div class="form-group">
+										<label for="email-login">Email address</label>
+										<input type="email" class="form-control" id="email-login" placeholder="Email">
+									</div>
+									<div class="form-group">
+										<label for="password-login">Password</label>
+										<input type="password" class="form-control" id="password-login" placeholder="Password">
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> Remember me
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Sidebar -->
+					<div class="col-sm-4 col-md-3">
+
+						<div class="sidebar-item">
+							<h4 class="title">Search</h4>
+							<div class="line-dec"></div>
+
+							<!-- Search form -->
+							<form class="form-inline" action="search.html">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search...">
+								</div>
+								<button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+						</div>
+
+						<div class="sidebar-item">
+							<h4 class="title">Categories</h4>
+							<div class="line-dec"></div>
+
+							<ul class="list-group">
+								<li class="list-group-item">
+									<a href="category.html">Animals</a>
+								</li>
+								<li class="list-group-item">
+									<a href="category.html">Nature</a>
+								</li>
+								<li class="list-group-item">
+									<a href="category.html">Landscapes</a>
+								</li>
+								<li class="list-group-item">
+									<a href="category.html">Weddings</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="sidebar-item">
+							<h4 class="title">Cart</h4>
+							<div class="line-dec"></div>
+
+							<small><b>4</b> products added.</small>
+							<br><br>
+
+							<table class="table">
+								<tr>
+									<td>Total:</td>
+									<td class="text-right"><b>34.98$</b></td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="container">
+			<div id="footer">
+				<div class="row">
+					<!-- Information column -->
+					<div class="col-sm-4">
+						<h4 class="footer-title">Information</h4>
+						<div class="line-dec"></div>
+						<ul>
+							<li><a href="javascript:void(0)" data-toggle="modal" data-target="#legalModal">Legal advice</a></li>
+							<li><a href="javascript:void(0)" data-toggle="modal" data-target="#termsModal">Terms and conditions</a></li>
+							<li><a href="about-us.html">About us</a></li>
+						</ul>
+					</div>
+
+					<!-- Offers column -->
+					<div class="col-sm-4">
+						<h4 class="footer-title">Our offers</h4>
+						<div class="line-dec"></div>
+						<ul>
+							<li><a href="#">New photos</a></li>
+							<li><a href="#">Top sellers</a></li>
+							<li><a href="#">Discount photos</a></li>
+						</ul>
+					</div>
+
+					<!-- Account column -->
+					<div class="col-sm-4">
+						<h4 class="footer-title">Your account</h4>
+						<div class="line-dec"></div>
+						<ul>
+							<li><a href="account.html">Your profile</a></li>
+							<li><a href="#">Personal information</a></li>
+							<li><a href="#">Shopping history</a></li>
+						</ul>
+					</div>
+
+					<!-- Copyright -->
+					<p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Legal advice -->
+		<div class="modal fade" id="legalModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h4 class="title">Legal advice</h4>
+						<div class="line-dec"></div>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+							<br><br>
+
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Terms and conditions -->
+		<div class="modal fade" id="termsModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h4 class="title">Terms and conditions</h4>
+						<div class="line-dec"></div>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+							<br><br>
+
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Include Scripts -->
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
 </html>
 

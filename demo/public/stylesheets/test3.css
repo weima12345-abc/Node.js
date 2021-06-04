@@ -8,7 +8,7 @@ box-shadow: 0 0 3px blue;
     border: 1px solid gray;
 } */
 body{
-    background-image: url('../images/all.jpg');
+    background-image: url('/images/all.jpg');
 }
 ul{
     float: left;
@@ -136,6 +136,20 @@ select{
     text-decoration-line: none;
     outline:none;
 }
+.z{
+    
+
+        color: white;
+        background: greenyellow;
+        border: 1px solid;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration-line: none;
+        outline:none;
+    }
+
 .o{
     border: 1px solid deepskyblue;
     color: white;
