@@ -11,12 +11,14 @@ let connection=mysql.createConnection({
 router.get('/',(req,res)=>{
     
       
-         connection.query("select * from book limit 0,6 ",function(err,a,fieids){  
+         connection.query("select * from book a INNER JOIN 租赁表 b on a.`名称`=b.`书籍名称` limit 0,6; ",function(err,a,fieids){  
+                console.log(a);
                 
             res.render('index',{detail:a});    
          });
+       
         
-    // res.render('index1');
+   
 });
 // router.get('/',(req,res)=>{
     

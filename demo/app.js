@@ -19,7 +19,7 @@ var test3Router=require('./routes/test3');
 var f=require('./routes/dtxr');
 var indentRouter=require('./routes/index1'); 
 var someindentRouter=require('./routes/someindent');
-var sail=require('./routes/sail');
+
 var app = express();
 
 
@@ -56,7 +56,7 @@ app.use('/e',ind3Router);
 app.use('/d',ind2Router); 
 app.use('/c',ind1Router);
 app.use('/b',indRouter);
-app.use('/b',sail);
+
 app.use('/',test3Router);
 app.use('/f',f);
 app.use('/g',ind4Router);
