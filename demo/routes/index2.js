@@ -20,7 +20,7 @@ router.post('/',(req,res)=>{
   
       
   connection.query("select * from book where 名称=? and 描述=? ",[req.body.名称,req.body.描述],function(err,a,fieids){  
-       
+        
      res.render('category',{detail:a});    
   });
 // res.render('index1');

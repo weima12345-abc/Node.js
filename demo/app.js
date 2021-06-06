@@ -21,6 +21,7 @@ var indentRouter=require('./routes/index1');
 var someindentRouter=require('./routes/someindent');
 var accoutRouter=require('./routes/accout');
 var accountRouter=require('./routes/account');
+var manage_accountRouter=require('./routes/manage_account'); 
 var app = express();
 
 
@@ -65,6 +66,7 @@ app.use('/indent',indentRouter);
 app.use('/someindent',someindentRouter)
 app.use('/accout',accoutRouter);
 app.use('/account',accountRouter);
+app.use('/manage_account',manage_accountRouter);
 module.exports = function (app) {
   app.get('/user/blogList',pageAdmin.checkAuth, pageAdmin.pageList);
   app.all('/user/post',pageAdmin.checkAuth, pageAdmin.pagePost);

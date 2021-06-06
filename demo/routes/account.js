@@ -9,8 +9,38 @@ let connection=mysql.createConnection({
 })
 /* GET home page. */
 router.get('/', (req, res)=> {
+  
   res.render('account');
 }); 
 
-                   
+
+
+ //Already 注册
+router.post('/',(req,res)=>{ 
+  let sql=`select *from user  where password="${req.body.password}" and email="${req.body.email}"`;
+           connection.query(sql,function(err,b,fields){
+                  if(req.body.password==b[0].password&&req.body.email==b[0].email){
+                      res.redirect('g');    
+                } else{
+                  res.render('indent_fail'); 
+                }
+
+                //     if(req.body.password==b[0].password&&req.body.email==b[0].email){
+                //   if(sql=='select *from user  where password="20001210500" and email="18174001013@139.com"') {
+                //     res.redirect('person');
+                //    }else{
+                //       res.redirect('g');   
+                //    }
+                // } else{
+                //   res.render('indent_fail'); 
+                // }
+
+              
+               
+              
+              
+             
+                
+  
+                   }); })                   
 module.exports = router;

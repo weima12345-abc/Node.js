@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zxx">
 	<head>
 		<meta charset="utf-8">
@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Title -->
-		<title>Authentication</title>
+		<title>Landscapes</title>
 
 		<!-- Favicon -->
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -20,13 +20,57 @@
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.theme.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.transitions.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/style.css">
+		<style type="text/css">
+			body{
+				margin: 0px;
+			}
+			.zhezhao{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				background: #000;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+			}
+			.tankuang{
+				position: relative;
+				background: #fff;
+				width: 50%;
+				height: 80%;
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header{
+				height: 40px;
+			}
+			#header-right{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: red;
+				color: #fff;
+				right: 5px;
+				top: 5px;
+				text-align: center;	}
+			.zl{
+			height: 35px;
+			width: 180px;
+			margin-top: 45px;
+			margin-left: 45px;
+				}
+		
+		</style>
 
 		<!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
 
 	</head>
 
 	<body>
+
          
+
 
 
 		<!-- Loader -->
@@ -114,7 +158,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="/images/img3/cart-images/4.jpeg.jpg" width="70" alt="item4" />
+								<img src="/images/img3/cart-images/4.jpeg" width="70" alt="item4" />
 								<!-- Item Name -->
 								<span class="item-name">Flowers</span>
 								<!-- Item Price -->
@@ -143,85 +187,19 @@
 								<a href="index.html">Home</a>
 							</li>
 							<li class="active">
-								Authentication
+								Landscapes
 							</li>
 						</ol>
 					</div>
 				</div>
-
-				<!-- Content & sidebar -->
-				<div class="row">
-
-					<!-- content -->
-					<div class="col-sm-8 col-md-9">
-
-						<div class="row">
-							<div class="col-sm-6">
-								<h4 class="title">
-									Create your account
-								</h4>
-								<div class="line-dec"></div>
-								<form action="/accout" method="POST">
-									<div class="form-group">
-										<label for="name">ID</label>
-										<input type="text" class="form-control" name="id" placeholder="Your name">
-									</div>
-									<div class="form-group">
-										<label for="name">Name</label>
-										<input type="text" class="form-control" name="name" placeholder="Your name">
-									</div>
-									<div class="form-group">
-										<label for="lastname">Password</label>
-										<input type="text" class="form-control" name="password" placeholder="Your last name">
-									</div>
-									<div class="form-group">
-										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" placeholder="Your email">
-									</div>
-									<div class="form-group">
-										<label for="password">Phone</label>
-										<input type="password" class="form-control" name="phone" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<label for="passwordRepeat">Create_time</label>
-										<input type="password" class="form-control" name="create_time" placeholder="Repeat your password">
-									</div>
-									<div class="form-group">
-										<label for="passwordRepeat">update_time</label>
-										<input type="password" class="form-control" name="update_time" placeholder="Repeat your password">
-									</div>
-									<button type="submit" class="btn btn-primary">Submit</button>
-								</form>
-							</div>
-
-							<div class="col-sm-6">
-								<h4 class="title">
-									Already registered?
-								</h4>
-								<div class="line-dec"></div>
-								<form  action="/account" method="POST">
-									<div class="form-group">
-										<label for="email-login">Email address</label>
-										<input type="email" class="form-control" name="email" placeholder="Email">
-									</div>
-									<div class="form-group">
-										<label for="password-login">Password</label>
-										<input type="password" class="form-control" name="password" placeholder="Password">
-									</div>
-									<div class="checkbox">
-										<label>
-											<input type="checkbox"> Remember me
-										</label>
-									</div>
-									<button type="submit" class="btn btn-primary">Submit</button>
-								</form>
-							</div>
-						</div>
-
-					</div>
+   <h2 style="    padding-left: 360px;
+   padding-top: 100px;
+   position: absolute;"><div>登录失败,请先注册 ! ! !</div></h2>
 
 					<!-- Sidebar -->
-					<div class="col-sm-4 col-md-3">
+					<div class="col-sm-4 col-md-3" style="    margin-left: 871px; 
+               
+                    position: relative;">
 
 						<div class="sidebar-item">
 							<h4 class="title">Search</h4>
@@ -234,6 +212,18 @@
 								</div>
 								<button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
 							</form>
+						</div>
+
+						<div class="sidebar-item">
+							<h4 class="title">Sort by</h4>
+							<div class="line-dec"></div>
+
+							<select class="form-control">
+								<option>Price: lowest first</option>
+								<option>Price: highest first</option>
+								<option>Product Name: A to Z</option>
+								<option>Product Name: Z to A</option>
+							</select>
 						</div>
 
 						<div class="sidebar-item">
@@ -364,7 +354,7 @@
 		<script type="text/javascript" src="/javascripts/js3/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/stylesheets/css3/owl-carousel/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="/javascripts/js3/main.js"></script>
-
+		
 	</body>
 </html>
 
