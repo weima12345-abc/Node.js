@@ -14,13 +14,55 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 <!-- Include CSS -->
+<link rel="stylesheet" href="/stylesheets/css1/all.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.theme.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.transitions.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/css3/style.css">
+<style type="text/css">
+	body{
+		margin: 0px;
+	}
+	.zhezhao{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		background: #000;
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+	}
+	.tankuang{
+		position: relative;
+		background: #fff;
+		width: 50%;
+		height: 80%;
+		border-radius: 5px;
+		margin: 5% auto;
+	}
+	#header{
+		height: 40px;
+	}
+	#header-right{
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		border-radius: 5px;
+		background: red;
+		color: #fff;
+		right: 5px;
+		top: 5px;
+		text-align: center;	}
+    .zl{
+	height: 35px;
+    width: 180px;
+    margin-top: 45px;
+    margin-left: 45px;
+		}
 
+</style>
 <!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">- -->
 
 </head>
@@ -57,8 +99,8 @@
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge">4</span></a></li>
 					<li role="presentation"><a href="#">Log out</a></li>
-					<li role="presentation"><a href="account.html">Your Account</a></li>
-					<li role="presentation"><a href="login.html"><b>Welcome,</b> <span>log in</span></a></li>
+					<li role="presentation"><a href="/account">Your Account</a></li>
+					<li role="presentation"><a href="/accout"><b>Welcome,</b> <span>log in</span></a></li>
 				</ul>
 
 			</div>
@@ -211,7 +253,7 @@
 
 						<!-- Top categories (item) -->
 						<div class="item active">
-							<img src="/images/img3/slider/1.jpeg.jpg" alt="Image 1">
+							<img src="/images/img3/slider/a.jpg" alt="Image 1">
 							<div class="carousel-caption">
 								Weddings and special events
 							</div>
@@ -219,7 +261,7 @@
 
 						<!-- Top categories (item) -->
 						<div class="item">
-							<img src="/images/img3/slider/2.jpg" alt="Image 2">
+							<img src="/images/img3/slider/b.jpg" alt="Image 2">
 							<div class="carousel-caption">
 								Landscape and nature
 							</div>
@@ -227,7 +269,7 @@
 
 						<!-- Top categories (item) -->
 						<div class="item">
-							<img src="/images/img3/slider/3.jpg" alt="Image 3">
+							<img src="/images/img3/slider/c.jpg" alt="Image 3">
 							<div class="carousel-caption">
 								Animals
 							</div>
@@ -251,7 +293,7 @@
 
 				<!-- Tip of the day -->
 				<div class="thumbnail">
-					<img src="/images/img3/tip.jpeg.jpg" alt="Tip of the day">
+					<img src="/images/img3/gt.jpg" alt="Tip of the day">
 					<div class="caption">
 						<h3>¿How to get best bokeh effect?</h3>
 						<p class="sm-hide">
@@ -281,7 +323,7 @@
 		<!-- Recent photos row -->
 		<div class="row">
 			<div class="col-sm-12">
-				<h4 class="title">Recent photos</h4>
+				<h4 class="title">Book photos</h4>
 				<div class="line-dec"></div>
 
 				<!-- Recent photos carousel -->
@@ -338,6 +380,66 @@
 			</div>
 		</div>
 
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<h4 class="title">Book details</h4>
+				<div class="line-dec"></div>
+
+				<!-- Recent photos carousel -->
+				<div id="recent-photos">
+		
+
+					<% detail.forEach((d,i)=>{ %>
+						<!--Grid column-->
+						<div class="col-lg-4 col-md-12 mb-4">
+			  
+						  <!--Card-->
+						  <div class="card">
+			  
+							<!--Card image-->
+							<div class="view overlay">
+								<img src="img/p5.jpg" class="card-img-top"
+								alt="">
+							  <a href="#">
+								<div class="mask rgba-white-slight"></div>
+							  </a>
+							</div>
+			  
+							<!--Card content-->
+							<div class="card-body">
+							  <!--Title--> 
+							  <form action="/g" method="POST">
+							  <span>书籍名称:</span>
+							 
+							  <input class="card-title" name="名称" style="border: 0;" value="<%=d.名称 %>">
+							  <!--Text-->
+							 <br>
+							  <span>书籍内容:</span>
+							  <input class="card-title" name="描述" style="border:0" value="<%=d.描述 %>">
+							  <br>
+							  <span>书籍价格:</span>
+							  <input class="card-title" name="价格" style="border:0" value="<%=d.价格 %>">
+							  <input  class="btn btn-primary btn-md" type="submit" value="Start looking and detail">
+							  <!-- <a target="_blank" type="submit" 
+								class="btn btn-primary btn-md">Start looking and detail
+								<i class="fas fa-play ml-2"></i>
+							  </a> -->
+							 
+								
+							  </form>
+							</div>
+			  
+						  </div>
+						  <!-- /.Card -->
+			  
+						</div>
+						<!--Grid column-->
+						<%})  %>
+				</div>
+			</div>
+		</div>
+			
 		<!-- Categories -->
 		<div class="row">
 			<div class="col-sm-12" id="#categories">

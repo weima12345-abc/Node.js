@@ -19,7 +19,8 @@ var test3Router=require('./routes/test3');
 var f=require('./routes/dtxr');
 var indentRouter=require('./routes/index1'); 
 var someindentRouter=require('./routes/someindent');
-
+var accoutRouter=require('./routes/accout');
+var accountRouter=require('./routes/account');
 var app = express();
 
 
@@ -59,10 +60,11 @@ app.use('/b',indRouter);
 
 app.use('/',test3Router);
 app.use('/f',f);
-app.use('/g',ind4Router);
+app.use('/g',ind4Router);//新的home
 app.use('/indent',indentRouter);
 app.use('/someindent',someindentRouter)
-
+app.use('/accout',accoutRouter);
+app.use('/account',accountRouter);
 module.exports = function (app) {
   app.get('/user/blogList',pageAdmin.checkAuth, pageAdmin.pageList);
   app.all('/user/post',pageAdmin.checkAuth, pageAdmin.pagePost);

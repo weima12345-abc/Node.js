@@ -14,12 +14,12 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 		<!-- Include CSS -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.carousel.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.theme.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.transitions.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.theme.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.transitions.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/style.css">
 
 		<!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
 
@@ -32,7 +32,7 @@
 		<!-- Loader -->
 		<div id="loader" class="loader">
 			<div class="loader-content">
-				<img src="images/loader.png" alt="Loading...">
+				<img src="/images/img3/loader.png" alt="Loading...">
 			</div>
 		</div>
 
@@ -46,7 +46,7 @@
 					<div class="col-xs-12 col-sm-5 col-md-4 flex">
 						<a href="index.html">
 							<!-- Logo -->
-							<img src="images/logo.png" class="logo img-responsive" alt="PhotoMarket">
+							<img src="/images/img3/logo.png" class="logo img-responsive" alt="PhotoMarket">
 						</a>
 					</div>
 
@@ -81,7 +81,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/1.jpg" width="70" alt="item1" />
+								<img src="/images/img3/cart-images/1.jpg" width="70" alt="item1" />
 								<!-- Item Name -->
 								<span class="item-name">Rails</span>
 								<!-- Item Price -->
@@ -92,7 +92,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/2.jpg" width="70" alt="item2" />
+								<img src="/images/img3/cart-images/2.jpg" width="70" alt="item2" />
 								<!-- Item Name -->
 								<span class="item-name">Forest leaves</span>
 								<!-- Item Price -->
@@ -103,7 +103,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/3.jpeg.jpg" width="70" alt="item3" />
+								<img src="/images/img3/cart-images/3.jpeg.jpg" width="70" alt="item3" />
 								<!-- Item Name -->
 								<span class="item-name">The tiger</span>
 								<!-- Item Price -->
@@ -114,7 +114,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/4.jpeg.jpg" width="70" alt="item4" />
+								<img src="/images/img3/cart-images/4.jpeg.jpg" width="70" alt="item4" />
 								<!-- Item Name -->
 								<span class="item-name">Flowers</span>
 								<!-- Item Price -->
@@ -161,26 +161,34 @@
 									Create your account
 								</h4>
 								<div class="line-dec"></div>
-								<form>
+								<form action="/accout" method="POST">
 									<div class="form-group">
-										<label for="name">Name</label>
-										<input type="text" class="form-control" id="name" placeholder="Your name">
+										<label for="name">ID</label>
+										<input type="text" class="form-control" name="id" placeholder="Your name">
 									</div>
 									<div class="form-group">
-										<label for="lastname">Last name</label>
-										<input type="text" class="form-control" id="lastname" placeholder="Your last name">
+										<label for="name">Name</label>
+										<input type="text" class="form-control" name="name" placeholder="Your name">
+									</div>
+									<div class="form-group">
+										<label for="lastname">Password</label>
+										<input type="text" class="form-control" name="password" placeholder="Your last name">
 									</div>
 									<div class="form-group">
 										<label for="email">Email address</label>
-										<input type="email" class="form-control" id="email" placeholder="Your email">
+										<input type="email" class="form-control" name="email" placeholder="Your email">
 									</div>
 									<div class="form-group">
-										<label for="password">Password</label>
-										<input type="password" class="form-control" id="password" placeholder="Password">
+										<label for="password">Phone</label>
+										<input type="password" class="form-control" name="phone" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<label for="passwordRepeat">Repeat password</label>
-										<input type="password" class="form-control" id="passwordRepeat" placeholder="Repeat your password">
+										<label for="passwordRepeat">Create_time</label>
+										<input type="password" class="form-control" name="create_time" placeholder="Repeat your password">
+									</div>
+									<div class="form-group">
+										<label for="passwordRepeat">update_time</label>
+										<input type="password" class="form-control" name="update_time" placeholder="Repeat your password">
 									</div>
 									<button type="submit" class="btn btn-primary">Submit</button>
 								</form>
@@ -352,10 +360,10 @@
 		</div>
 
 		<!-- Include Scripts -->
-		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="/javascripts/js3/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="/javascripts/js3/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/stylesheets/css3/owl-carousel/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="/javascripts/js3/main.js"></script>
 
 	</body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zxx">
 	<head>
 		<meta charset="utf-8">
@@ -76,7 +76,7 @@
 		<!-- Loader -->
 		<div id="loader" class="loader">
 			<div class="loader-content">
-				<img src="images/loader.png" alt="Loading...">
+				<img src="/images/img3/loader.png" alt="Loading...">
 			</div>
 		</div>
 
@@ -192,110 +192,14 @@
 						</ol>
 					</div>
 				</div>
-
-				<!-- List & sidebar -->
-				<div class="row">
-
-					<!-- List -->
-					<div class="col-sm-8 col-md-9">
-
-						<!-- Category Name -->
-						<h4 class="title">
-							Landscapes
-							<!-- Total photos in category -->
-							<small>(5 photos)</small>
-						</h4>
-
-						<div class="line-dec"></div>
-
-						<!-- Category description -->
-						<p class="description"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</small></p>
-
-						<!-- separator -->
-						<hr>
-
-						<!-- Photos list -->
-
-						<!-- photo list item -->
-						<div class="media photo-list">
-							<!-- photo item image -->
-							<div class="media-left">
-								<a href="#">
-									<img src="/images/img3/photos/1.jpg" class="media-object photo-list-image" alt="List photo">
-								</a>
-							</div>
-								<% detail.forEach((d,i)=>{ %>
-							<!-- photo item body -->
-							<div class="media-body">
-								<div class="row">
-								
-									<!-- Description column -->
-									<div class="col-sm-8">
-										<h4 class="media-heading photo-list-title">
-											<%=d.名称 %> <span class="badge">NEW!</span>
-										</h4>
-										<p class="text-justify photo-list-description">
-										<%=d.描述 %>
-										</p>
-									</div>
-								
-									<!-- Price and actions -->
-									<div class="col-sm-4">
-										<h4 class="media-heading photo-list-price">
-										<%=d.价格 %>$	<small>usd</small>
-										</h4>
-										<input onclick="zl()" class="btn btn-block btn-success" value="Add to cart">
-										<a href="picture.html" class="btn btn-block btn-primary">View</a>
-									</div>
-								</div>
-							</div>
-								<%})  %>
-						</div>
-						<div class="zhezhao" id='zhezhao'>
-							<div class="tankuang">
-								<div id="header">
-									<form action="/g/a" method="POST">
-									 <input class="zl"type="text" name="id" placeholder="id">
-									<input class="zl"type="text" name="姓名" placeholder="姓名">
-									<input class="zl"type="text"name="年龄" placeholder="年龄">
-									<input class="zl"type="text" name="手机号" placeholder="手机号">
-									<input class="zl"type="text" name="邮箱" placeholder="邮箱">
-									<input class="zl"type="text" name="书籍名称" placeholder="书籍名称">
-									<input class="zl"type="text" name="初始时间" placeholder="初始时间">
-									<input class="zl"type="text" name="截至时间" placeholder="截至时间">
-									<input class="zl"type="text" name="书籍状态" placeholder="书籍状态">
-									<input class="zl"type="submit" value="租赁">
-								</form>
-									<div id="header-right" onclick="hidder()">x</div>
-								</div>
-							</div>
-						</div> 
-
-						<!-- Pagination -->
-						<nav class="text-center">
-							<ul class="pagination">
-								<li>
-									<a href="#" aria-label="Previous">
-										<span aria-hidden="true">&laquo;</span>
-									</a>
-								</li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li>
-									<a href="#" aria-label="Next">
-										<span aria-hidden="true">&raquo;</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-
-					</div>
+   <h2 style="    padding-left: 360px;
+   padding-top: 100px;
+   position: absolute;"><div>创建账号成功</div></h2>
 
 					<!-- Sidebar -->
-					<div class="col-sm-4 col-md-3">
+					<div class="col-sm-4 col-md-3" style="    margin-left: 871px; 
+               
+                    position: relative;">
 
 						<div class="sidebar-item">
 							<h4 class="title">Search</h4>
@@ -450,15 +354,7 @@
 		<script type="text/javascript" src="/javascripts/js3/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/stylesheets/css3/owl-carousel/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="/javascripts/js3/main.js"></script>
-		<script type="text/javascript">
-			document.getElementById('zhezhao').style.display="none";
-			function zl(){
-				document.getElementById('zhezhao').style.display="";
-			}
-			function hidder(){
-				document.getElementById('zhezhao').style.display="none";
-			}
-		</script>
+		
 	</body>
 </html>
 
