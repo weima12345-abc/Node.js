@@ -224,17 +224,18 @@
 									<img src="/images/img3/photos/1.jpg" class="media-object photo-list-image" alt="List photo">
 								</a>
 							</div>
+							
 								<% detail.forEach((d,i)=>{ %>
 							<!-- photo item body -->
 							<div class="media-body">
 								<div class="row">
-								
+								<form action="/account/a" method="POST">
 									<!-- Description column -->
 									<div class="col-sm-8">
-										<h4 class="media-heading photo-list-title">
-											<%=d.名称 %> <span class="badge">NEW!</span>
+										<h4 class="media-heading photo-list-title" >
+										<input type="hidden" name="名称" value="<%=d.名称 %>">	<%=d.名称 %> <span class="badge">NEW!</span>
 										</h4>
-										<p class="text-justify photo-list-description">
+										<p class="text-justify photo-list-description"><input type="hidden" name="描述" value="<%=d.描述 %>">
 										<%=d.描述 %>
 										</p>
 									</div>
@@ -242,14 +243,16 @@
 									<!-- Price and actions -->
 									<div class="col-sm-4">
 										<h4 class="media-heading photo-list-price">
-										<%=d.价格 %>$	<small>usd</small>
+										<input type="hidden" name="价格" value="<%=d.价格 %>"><%=d.价格 %>$	<small>usd</small>
 										</h4>
-										<input onclick="zl()" class="btn btn-block btn-success" value="Add to cart">
+										<input type="submit" class="btn btn-block btn-success" value="Add to cart">
 										<a href="picture.html" class="btn btn-block btn-primary">View</a>
 									</div>
+								</form>
 								</div>
 							</div>
 								<%})  %>
+							
 						</div>
 						<div class="zhezhao" id='zhezhao'>
 							<div class="tankuang">

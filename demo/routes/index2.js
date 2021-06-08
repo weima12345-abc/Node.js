@@ -16,17 +16,18 @@ router.get('/',(req,res)=>{
          });
    
 });
-router.get('/a',(req,res)=>{
-   connection.query("select * from 租赁表 limit 0,6 ",function(err,a,fieids){  
-      res.render('indent_view',{detail:a});
+router.get('/a',(req,res)=>{ 
+
+   connection.query(" SELECT *from `租赁表`  limit 0,6 ",function(err,a,fieids){  
+      res.render('account',{detail:a});
    });
-})
+}) 
 router.post('/',(req,res)=>{
   
-      
+       
   connection.query("select * from book where 名称=? and 描述=? ",[req.body.名称,req.body.描述],function(err,a,fieids){  
         
-     res.render('category',{detail:a});    
+     res.render('category',{detail:a});     
   });
 
 });
@@ -38,8 +39,8 @@ router.post('/a',(req,res)=>{
 
 })
 router.post('/b',(req,res)=>{
-   connection.query("delete from 租赁表 where 姓名=?",[req.body.姓名],function(err,a,fieids){  
-res.redirect('/g/a');
+   connection.query("delete from 租赁表 where 书籍名称=?",[req.body.书籍名称],function(err,a,fieids){  
+res.redirect('/g_c');
    
  });
 })

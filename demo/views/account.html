@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Title -->
-		<title>Pic2Market</title>
+		<title>Account</title>
 
 		<!-- Favicon -->
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -149,19 +149,69 @@
 
 						<h4 class="title">Personal Information</h4>
 						<div class="line-dec"></div>
-
+                     
 						<ul class="list-group">
-							<li class="list-group-item"><b>Credits/Money:</b> $20usd</li>
+							<li class="list-group-item"><b>Credits/Money:</b>3 usd</li>
 							<li class="list-group-item"><a href="#"><b>Pending sales</b> <span class="badge">3</span></a></li>
-							<li class="list-group-item"><b>E-mail:</b> johndoe@example.com</li>
+							
+							<li class="list-group-item"><b>E-mail:</b>18174001013@139.com</li>
 							<li class="list-group-item"><a href="#"><b>Pictures buyed</b> <span class="badge">10</span></a></li>
-							<li class="list-group-item"><b>Total money acquired:</b> $150usd</li>
-						</ul>
-
+							<li class="list-group-item"><b>Total money acquired:</b> $119usd</li>
+						
+						
+						
+						</ul> 
+					
 						<a href="#" class="btn btn-block btn-success">Edit information</a>
 					</div>
 
-					<div class="col-md-6 col-sm-7">
+						<!-- photo list item -->
+							<% detail.forEach((d,i)=>{ %>
+							<div class="media photo-list">
+								<!-- photo item image -->
+								<div class="media-left">
+									<a href="#">
+										<img src="/images/img3/photos/1.jpg" class="media-object photo-list-image" alt="List photo">
+									</a>
+								</div>
+								
+								<!-- photo item body -->
+								<div class="media-body">
+									<div class="row">
+									<form action="/g/b" method="POST">
+										<!-- Description column -->
+										<div class="col-sm-8">
+											<h4 class="media-heading photo-list-title" id="media-heading photo-list-title">
+											借阅人:	<%=d.姓名 %> <span class="badge">NEW!</span>
+											<input type="hidden" name="姓名" value="<%=d.姓名 %>" >
+											</h4>
+											<p class="text-justify photo-list-description">
+											所借书籍:<%=d.书籍名称 %>
+											</p>
+											<p class="text-justify photo-list-description">
+											邮箱:<%=d.邮箱 %>
+											</p>
+										</div>
+									
+										<!-- Price and actions -->
+										<div class="col-sm-4">
+											<h4 class="media-heading photo-list-price">
+											书籍状态:<%=d.书籍状态 %>	<small>usd</small>
+											</h4>
+	
+											<!-- <input type="submit"  class="btn btn-block btn-success" value="还书"> -->
+											<!-- <a href="" class="btn btn-block btn-primary">还书</a> -->
+										</div>
+									</form>
+									</div>
+								</div>
+								
+							</div>
+								<%})  %>
+	
+
+				
+					<!-- <div class="col-md-6 col-sm-7">
 						<h4 class="title">Your photos</h4>
 						<div class="line-dec"></div>
 
@@ -260,7 +310,7 @@
 							</div>
 
 						</div>
-					</div>
+					</div> -->
 
 					<div class="col-md-3 col-sm-12">
 						<h4 class="title">Lasts sales</h4>
