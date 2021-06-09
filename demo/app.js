@@ -23,8 +23,9 @@ var accoutRouter=require('./routes/accout');
 var accountRouter=require('./routes/account');
 var manage_accountRouter=require('./routes/manage_account'); 
 var g_cRouter=require('./routes/g_c'); 
-
-
+var manage_bookRouter=require('./routes/manage_book'); 
+var manage_personRouter=require('./routes/manage_person');
+var manage_p_bRouter=require('./routes/manage_p_b');
 var app = express(); 
 
 
@@ -71,8 +72,9 @@ app.use('/accout',accoutRouter);
 app.use('/account',accountRouter);
 app.use('/manage_account',manage_accountRouter);
 app.use('/g_c',g_cRouter);
-
-
+app.use('/manage_book',manage_bookRouter);
+app.use('/manage_person',manage_personRouter);
+app.use('/manage_p_b',manage_p_bRouter);
 module.exports = function (app) {
   app.get('/user/blogList',pageAdmin.checkAuth, pageAdmin.pageList);
   app.all('/user/post',pageAdmin.checkAuth, pageAdmin.pagePost);

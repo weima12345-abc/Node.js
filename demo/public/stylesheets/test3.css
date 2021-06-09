@@ -7,9 +7,9 @@ box-shadow: 0 0 3px blue;
     border-radius: 4px; ;
     border: 1px solid gray;
 } */
-body{
-    background-image: url('/images/all.jpg');
-}
+/* body{
+    /* background-image: url('/images/all.jpg'); */
+/* } */
 ul{
     float: left;
 }

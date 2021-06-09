@@ -20,7 +20,8 @@
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.theme.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/owl-carousel/owl.transitions.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/css3/style.css">
-
+        <link rel="stylesheet" type="text/css" href="/stylesheets/test3.css">
+		
 		<!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
 
 	</head>
@@ -150,50 +151,75 @@
 				</div>
 
 			
-									管理界面
-								</h4>	
+								书籍管理界面
+								</h4>
+								<!-- <button class="e"onclick="add()" style="margin-left: 800px;">添加</button> -->
+							<a href="/dtxr"><button class="b">添加</button></a>
+								
 								<div class="line-dec"></div>
-								<!-- <form  action="/manage_account" method="POST" style="width:190px"> -->
-								<a href="/manage_book"><label  class="btn btn-primary"style="margin-top: 30px" >图书管理</label></a>	
-								<br>
-								<a href="/manage_person"><label  class="btn btn-primary" style="margin-top: 50px">注册人员管理</label></a>	
-								<br>
-								<a href="/manage_p_b"><label  class="btn btn-primary" style="margin-top: 50px">图书租赁人管理</label></a>
-									<!-- <div  class="btn btn-primary">
-										<label for="email-login">注册人员管理</label>
-										
-									</div>
-                                    <br>
-                                    <div  class="btn btn-primary">
-										<label for="email-login">图书租赁人管理</label>
-										class="form-group" -->
-									<!-- </div>  -->
-									
-									<!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-								<!-- </form> -->
-							</div>
-						</div>
+								<table class="ui" id="er">
+    
 
-					</div>
+                                    <tr >
+                                        <th class="q">编号</th>
+                                        <th class="q">名称</th>
+                                        <th class="q">作者</th>
+                                        <th class="w">类别</th>
+                                        <th class="y">描述</th> 
+                                        <th class="y">价格</th> 
+                                        <th class="t">操作</th>
+                                    </tr>
+                                    
+                                        <tbody class="show1" >
+                                        
+                                                <% detail.forEach((d,i)=>{ %>  
+                                                      <form action="/manage_book/a" method="POST">
+                                                <tr>
+                                                    <td><%=d.编号 %></td>
+                                                    <td><%=d.名称 %></td><input type="hidden" name="名称" value="<%=d.名称 %>">
+                                                    <td><%=d.作者 %></td>
+                                                    <td><%=d.分类 %></td>
+                                                    <td><%=d.描述 %></td>
+                                                    <td><%=d.价格 %></td>
+                                                    <td class="j">                                                       
+                                                    <!-- <button class="o" data-id=<%=i %>>删除</button>    -->
+													
+                                                    <button class="o" type="submit">删除</button> 
+                                                    </form>
+                                                        <button class="i" data-id=<%=i %>>修改</button>
+													
+                                                    <span class="upBtn"></span><span class="downBtn">														
+													</td>
+                                                </tr>
+                                            
+                                            <%})  %>
+                                                
+                                                
+                                             
+                                            </tbody>
+                                      
+                                    </table>
+									
+					            </div>
 
 					<!-- Sidebar -->
-					<div class="col-sm-4 col-md-3" style="position: relative;
-					margin-top: -270px;
-					margin-left: 925px;
+					<div class="col-sm-4 col-md-3"  style="position:relative;
+					margin-top: -100px;
+					margin-left: 1049px;
+					">
 					
-					"
-					>
+					
 
 						<div class="sidebar-item">
 							<h4 class="title">Search</h4>
 							<div class="line-dec"></div>
 
 							<!-- Search form -->
-							<form class="form-inline" action="search.html" >
+							<form class="form-inline" action="/d" method="POST" >
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search...">
+									<input type="text" name="名称" class="form-control" placeholder="Book Search...">
 								</div>
-								<button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+								<button type="submit" class="btn btn-primary" style="margin-top: 10px;"><i class="fa fa-search" aria-hidden="true">submit</i></button>
 							</form>
 						</div>
 
@@ -325,7 +351,10 @@
 		<script type="text/javascript" src="/javascripts/js3/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/stylesheets/css3/owl-carousel/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="/javascripts/js3/main.js"></script>
-
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="/javascripts/jquery-3.5.1.min.js"></script>
+		<script src="/javascripts/jquery-3.5.1.js"></script>	  
+	    <script src="/javascripts/Table.js"></script>
 	</body>
 </html>
 

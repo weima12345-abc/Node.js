@@ -22,7 +22,8 @@ router.get('/',(req,res)=>{
 // sql 新增 book
 router.post('/',(req,res)=>{
     connection.query("insert into book1( id ,编号,名称,作者,分类,描述,价格) value(?,?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格],function(err,b,fields){
-       res.redirect('/'); 
+      //  res.redirect('/'); 
+      res.redirect('/manage_book'); 
     });
 });
 
@@ -34,11 +35,10 @@ router.post('/',(req,res)=>{
 //         res.redirect('/');
 //     })
 // });
-router.post('/a',(req,res)=>{
-  connection.query("delete from book1 where 名称=?",[req.body.名称],(err,a,fields)=>{
-    res.redirect('/');
-  }) 
-})
+
+
+
+
 
 
 
@@ -50,7 +50,7 @@ router.get('/update/:id',(req,res)=>{
         id:req.params.id})
 });
 // 分页
-router.get('/next',(req,res)=>{
+router.get('/next',(req,res)=>{ 
  
         var pagenum = req.query.page;
         var start;

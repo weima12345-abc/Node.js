@@ -20,13 +20,13 @@ function ascOrder() {
 			var x=Number(trs[i].children[col].innerText),y=Number(trs[j].children[col].innerText);
 			if(x>y) {
 				var t=trs[i].innerHTML;
-				trs[i].innerHTML=trs[j].innerHTML;
+				trs[i].innerHTML=trs[j].innerHTML;  
 				trs[j].innerHTML=t;
 			}
 		}
 }
 
-function desOrder() {
+function desOrder() { 
 	var col=this.parentNode.cellIndex;//需要排序的列序号
 
 	var  tbody=document.getElementsByTagName("tbody");
@@ -80,7 +80,7 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 	  window.location.href='/delete/'+index;
 
 	} else {
-	  swal("Your imaginary file is safe!");
+	  swal("Your imaginary file is safe!");   
 	}
  });
 
@@ -88,7 +88,7 @@ Array.from( document.getElementsByClassName("o")).forEach(i=>i.onclick=function(
 //修改
 Array.from( document.getElementsByClassName("i")).forEach(i=>i.onclick=function(){
 	let index=	this.getAttribute("data-id");
-	window.location.href='/update/'+index;
+	window.location.href='/manage_book/update/'+index;  
 
 	});
 //查询	
