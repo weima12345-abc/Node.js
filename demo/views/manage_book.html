@@ -175,12 +175,12 @@
                                                 <% detail.forEach((d,i)=>{ %>  
                                                       <form action="/manage_book/a" method="POST">
                                                 <tr>
-                                                    <td><%=d.编号 %></td>
-                                                    <td><%=d.名称 %></td><input type="hidden" name="名称" value="<%=d.名称 %>">
-                                                    <td><%=d.作者 %></td>
-                                                    <td><%=d.分类 %></td>
-                                                    <td><%=d.描述 %></td>
-                                                    <td><%=d.价格 %></td>
+                                                    <td><%=d.id %></td>
+                                                    <td><%=d.name %></td><input type="hidden" name="名称" value="<%=d.name %>">
+                                                    <td><%=d.zz %></td>
+                                                    <td><%=d.fl %></td>
+                                                    <td><%=d.ms %></td>
+                                                    <td><%=d.price %></td>
                                                     <td class="j">                                                       
                                                     <!-- <button class="o" data-id=<%=i %>>删除</button>    -->
 													
@@ -217,7 +217,7 @@
 							<!-- Search form -->
 							<form class="form-inline" action="/d" method="POST" >
 								<div class="form-group">
-									<input type="text" name="名称" class="form-control" placeholder="Book Search...">
+									<input type="text" name="name" class="form-control" placeholder="Book Search...">
 								</div>
 								<button type="submit" class="btn btn-primary" style="margin-top: 10px;"><i class="fa fa-search" aria-hidden="true">submit</i></button>
 							</form>

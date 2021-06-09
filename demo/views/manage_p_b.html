@@ -154,33 +154,39 @@
 								租赁人员管理界面
 								</h4>
 								<!-- <button class="e"onclick="add()" style="margin-left: 800px;">添加</button> -->
-							<a href="/dtxr/person_add"><button class="b">添加</button></a>
+							<a href="/manage_p_b/add"><button class="b">添加</button></a>
 								
 								<div class="line-dec"></div>
 								<table class="ui" id="er">
                                     <thead>
                                 
                                 <tr >
-                                    <th class="q">name</th>
-                                    <th class="q">password</th>
-                                    <th class="q">email</th>
-                                    <th class="w">phone</th>
-                                    <th class="y">create_time</th> 
-                                    <th class="t">update_time</th>
-                                    <th>操作</th>
+                                    <th class="q">姓名</th>
+                                    <th class="q">年龄</th>
+                                  
+                                    <th class="w">邮箱</th>
+									<th class="w">所借书名</th>
+									<th class="y">借书时间</th> 
+                                    <th class="y">归还时间</th>
+                                    
+									
+                                    <th class="t">操作</th>
+									
                                 </tr>
                                     <tbody class="show1" >
                                             <% detail.forEach((d,i)=>{ %>
-                                                <form action="/manage_person/a" method="POST">
+                                                <form action="/manage_p_b/b" method="POST">
                                             <tr>
-                                                <td><%=d.name %></td><input type="hidden" name="name" value="<%=d.name %>">
-                                                <td><%=d.password %></td>
-                                                <td><%=d.email %></td>
-                                                <td><%=d.phone %></td>
-                                                <td><%=d.create_time %></td>
-                                                <td><%=d.update_time %></td>
+                                                <td><%=d.name %></td>
+                                                <td><%=d.age %></td>
+												
+												<td><%=d.yx %></td>
+                                                <td><%=d.book_name %></td><input type="hidden" name="book_name" value="<%=d.book_name %>">
+                                                <td><%=d.c_time %></td>
+                                                <td><%=d.u_time %></td>
+												
                                                 <td class="j"> 
-                                                    <button class="o" data-id=<%=i %>>删除</button>  
+													<button class="o" type="submit">删除</button>   
                                                      </form>	
                                                     <button class="i" data-id=<%=i %>>修改</button></a>
                                                    
@@ -209,9 +215,9 @@
 							<div class="line-dec"></div>
 
 							<!-- Search form -->
-							<form class="form-inline" action="/d/b" method="POST" >
+							<form class="form-inline" action="/d/c" method="POST" >
 								<div class="form-group">
-									<input type="text" name="name" class="form-control" placeholder="Book Search...">
+									<input type="text" name="book_name" class="form-control" placeholder="Book Search...">
 								</div>
 								<button type="submit" class="btn btn-primary" style="margin-top: 10px;"><i class="fa fa-search" aria-hidden="true">submit</i></button>
 							</form>
@@ -348,7 +354,7 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="/javascripts/jquery-3.5.1.min.js"></script>
 		<script src="/javascripts/jquery-3.5.1.js"></script>	  
-	    <script src="/javascripts/Table1.js"></script>
+	    <script src="/javascripts/Table2.js"></script>
 	</body>
 </html>
 

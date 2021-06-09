@@ -28,12 +28,7 @@ router.post('/',(req,res)=>{
                  }); })  
                  
                 
-// sql 传输新增 user
-router.post('/person_add',(req,res)=>{
-    connection.query("insert into user(id,name,password,email,phone,create_time,update_time)   value(?,?,?,?,?,?,?)",[req.body.id,req.body.name,req.body.password,req.body.email,req.body.phone,req.body.create_time,req.body.update_time],function(err,c,firlds){
-        res.redirect('/manage_person');       
-        }); 
-            });
+
 
 
 // sql 删除 user

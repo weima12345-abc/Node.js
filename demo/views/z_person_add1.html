@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/add1.css">
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+    
+     <!-- <link rel="icon" href="data:image/ico;base64,aWNv">
+    <link rel="shortcut icon" href="img/bitbug_favicon2.ico" />  -->
+</head>
+<body>
+          <div class="changes" id="changes">
+    <form action="/manage_p_b/a" method="POST">
+                <!-- <span>i d：</span> -->
+                <input type="hidden" name="id" value="<%=obj.id %>" placeholder="请输入书籍ID ..." required=""> -->
+               <br>
+                <span>姓名 ：</span>
+                <input type="text" name="name" value="<%=obj.name %>"placeholder="请输入名字"class="change" required="">
+                <br>
+                <span>年龄：</span>
+                <input type="text"   name="age" value="<%=obj.age %>" placeholder="请输入年龄" class="change"required="">
+                <br>
+                <span>邮箱：</span>
+                <input type="text"   name="yx" value="<%=obj.yx %>" placeholder="请输入邮箱" class="change"required="">
+                <br>
+                <span>书籍名称：</span>
+                <input type="text"   name="book_name" value="<%=obj.book_name %>" placeholder="请输入书籍名称" class="change"required=""> 
+                <br>
+                <span>借书时间：</span>
+                <input type="text"   name="c_time" value="<%=obj.c_time %>" placeholder="请输入借书时间" class="change"required=""> 
+                <br>
+                <span>还书时间：</span>
+                <input type="text"   name="u_time" value="<%=obj.u_time %>" placeholder="请输入还书时间" class="change"required=""> 
+                <input type="submit" value="提交">  
+            </form>
+        </div> 
+   
+    
+
+
+</body>
+</html>
