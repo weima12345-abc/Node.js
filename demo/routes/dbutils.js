@@ -8,7 +8,7 @@ let connection=mysql.createConnection({
 });
 // sql 修改 book
 router.post('/add',(req,res)=>{
-  connection.query("update  book set id=?,编号=?,名称=?,作者=?,分类=?,描述=?,价格=? where id=?",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格,req.body.id],function(err,c,firlds){
+  connection.query("update  book1 set 编号=?,名称=?,作者=?,分类=?,描述=?,价格=? where id=?",[req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格,req.body.id],function(err,c,firlds){
     res.redirect('/');     
     }); 
   });

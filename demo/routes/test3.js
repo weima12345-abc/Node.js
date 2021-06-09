@@ -12,7 +12,7 @@ var mysql=require('mysql');
 // get to home book
 router.get('/',(req,res)=>{
   
-         connection.query("select * from book",function(err,a,fieids){  
+         connection.query("select * from book1",function(err,a,fieids){  
        data=a;
             res.render('test3',{detail:data});    
          });
@@ -21,19 +21,25 @@ router.get('/',(req,res)=>{
 
 // sql 新增 book
 router.post('/',(req,res)=>{
-    connection.query("insert into book(id,编号,名称,作者,分类,描述,价格) value(?,?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格],function(err,b,fields){
+    connection.query("insert into book1( id ,编号,名称,作者,分类,描述,价格) value(?,?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格],function(err,b,fields){
        res.redirect('/'); 
     });
 });
 
 
 // sql 删除 book
-router.get('/delete/:id',(req,res)=>{
-let sql=`delete from book where id=${req.params.id}`; 
-    connection.query(sql,function(err,b,fields){
-        res.redirect('/');
-    })
-});
+// router.get('/delete/:id',(req,res)=>{
+// let sql=`delete from book1 where 名称=${req.body.名称}`; 
+//     connection.query(sql,function(err,b,fields){
+//         res.redirect('/');
+//     })
+// });
+router.post('/a',(req,res)=>{
+  connection.query("delete from book1 where 名称=?",[req.body.名称],(err,a,fields)=>{
+    res.redirect('/');
+  }) 
+})
+
 
 
 

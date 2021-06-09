@@ -16,7 +16,8 @@ router.post('/', (req, res)=> {
     let sql=`select *from user  where password="${req.body.password}" and email="${req.body.email}"`;
              connection.query(sql,function(err,b,fields){
     if(sql=='select *from user  where password="20001210500" and email="18174001013@139.com"') {
-      res.redirect('g_c');
+      // res.redirect('g_c');
+      res.render('manage_all');
       
      }else{
          res.render('manage_fail');

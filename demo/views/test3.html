@@ -46,27 +46,33 @@
     <th class="y">价格</th> 
     <th class="t">操作</th>
 </tr>
+
 	<tbody class="show1" >
-			<% detail.forEach((d,i)=>{ %>
+    
+			<% detail.forEach((d,i)=>{ %>  
+                  <form action="/a" method="POST">
             <tr>
 				<td><%=d.编号 %></td>
-				<td><%=d.名称 %></td>
+                <td><%=d.名称 %></td><input type="hidden" name="名称" value="<%=d.名称 %>">
 				<td><%=d.作者 %></td>
 				<td><%=d.分类 %></td>
 				<td><%=d.描述 %></td>
                 <td><%=d.价格 %></td>
 				<td class="j">
-					<button class="i" data-id=<%=i %>>修改</button>
-					<button class="o" data-id=<%=i %>>删除</button>   
+					
+					<!-- <button class="o" data-id=<%=i %>>删除</button>    -->
+                  <button class="o" type="submit">删除</button> 
+                </form>
+                    <button class="i" data-id=<%=i %>>修改</button>
 				<span class="upBtn"></span><span class="downBtn"></td>
 			</tr>
 		
 		<%})  %>
 			
 			
-		
+		 
 		</tbody>
-        
+  
 </table>
 
         </div>

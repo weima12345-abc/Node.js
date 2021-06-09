@@ -22,8 +22,8 @@
 <body>
           <div class="changes" id="changes">
     <form action="/c/add" method="POST">
-                <span>书籍 id：</span>
-                <input type="number" name="id" value="<%=id %>" required="">   
+                <!-- <span>书籍 id：</span> -->
+                <input type="hidden" name="id" value="<%=obj.id %>" required="">   
               
                 <span>书籍编号：</span>
                 <input type="number" name="编号" value="<%=obj.编号 %>"  placeholder="请输入名字"class="change"required="" >
