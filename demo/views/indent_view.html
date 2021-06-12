@@ -232,22 +232,22 @@
 									<!-- Description column -->
 									<div class="col-sm-8">
 										<h4 class="media-heading photo-list-title" id="media-heading photo-list-title">
-										借阅人:	<%=d.姓名 %> <span class="badge">NEW!</span>
-                                        <input type="hidden" name="姓名" value="<%=d.姓名 %>" >
+										借阅人:	<%=d.name %> <span class="badge">NEW!</span>
+                                        <input type="hidden" name="姓名" value="<%=d.name %>" >
 										</h4>
 										<p class="text-justify photo-list-description">
-											<input type="hidden" name="书籍名称" value="<%=d.书籍名称 %>" >
-										所借书籍:<%=d.书籍名称 %>
+											<input type="hidden" name="书籍名称" value="<%=d.book_name %>" >
+										所借书籍:<%=d.book_name %>
 										</p>
                                         <p class="text-justify photo-list-description">
-                                        邮箱:<%=d.邮箱 %>
+                                        邮箱:<%=d.yx %>
                                         </p>
 									</div>
 								
 									<!-- Price and actions -->
 									<div class="col-sm-4">
 										<h4 class="media-heading photo-list-price">
-                                        书籍状态:<%=d.书籍状态 %>	<small>usd</small>
+                                        书籍状态:借出	<small>usd</small>
 										</h4>
 
 										<input type="submit"  class="btn btn-block btn-success" value="还书">

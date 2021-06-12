@@ -166,14 +166,15 @@
                                         <th class="q">作者</th>
                                         <th class="w">类别</th>
                                         <th class="y">描述</th> 
-                                        <th class="y">价格</th> 
+                                        <th class="y">价格</th>
+										<!-- <th class="w">图片</th> -->
                                         <th class="t">操作</th>
                                     </tr>
                                     
                                         <tbody class="show1" >
                                         
                                                 <% detail.forEach((d,i)=>{ %>  
-                                                      <form action="/manage_book/a" method="POST">
+                                                      <form action="/manage_book/b" method="POST">
                                                 <tr>
                                                     <td><%=d.id %></td>
                                                     <td><%=d.name %></td><input type="hidden" name="名称" value="<%=d.name %>">
@@ -181,6 +182,7 @@
                                                     <td><%=d.fl %></td>
                                                     <td><%=d.ms %></td>
                                                     <td><%=d.price %></td>
+												    <!-- <td><img src="<%=d.img %>"></td> -->
                                                     <td class="j">                                                       
                                                     <!-- <button class="o" data-id=<%=i %>>删除</button>    -->
 													

@@ -10,12 +10,12 @@ let connection=mysql.createConnection({
 //查询 book
 router.post('/',(req,res)=>{
 
-  let sql=`select * from book where name like '${req.body.name}'  `;
+  let sql=`select * from book where name like '%${req.body.name}%'  `;
   connection.query(sql,function(err,a,fields){
   // res.render('test3',{detail:a});
   res.render('manage_book',{detail:a}); 
   })
-});
+}); 
 
 
 //查询 person

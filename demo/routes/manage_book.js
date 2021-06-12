@@ -2,6 +2,10 @@ let express=require('express');
 let router=express.Router();
 var data=new Array();
 var mysql=require('mysql'); 
+ var formidable=require('formidable');
+ var path=require('path');
+ var fs=require('fs');
+
   let connection=mysql.createConnection({
           user:"root",
           password:"123456",
@@ -18,10 +22,24 @@ router.get('/',(req,res)=>{
 
 //增添 
 router.post('/',(req,res)=>{
-  connection.query("insert into book(z_id ,id,name,zz,fl,ms,price) value(?,?,?,?,?,?,?) ",[req.body.id,req.body.编号,req.body.名称,req.body.作者,req.body.分类,req.body.描述,req.body.价格],function(err,b,fields){
-    //  res.redirect('/'); 
-    res.redirect('/manage_book'); 
+ var form= formidable({
+multiples:true,
+uploadDir:path.join(__dirname,"../public/upload_img" ,)
   });
+  form.parse(req,(err,fields,files)=>{
+
+ 
+    var newName="d:\\restful (node.js)\\demo\\public\\upload_img\\"+files.img.name;
+fs.rename(files.img.path,newName,(err=>{
+console.log(err);
+}))
+connection.query("insert into book(z_id,id,name,zz,fl,ms,price,img) value(?,?,?,?,?,?,?,?) ",[fields.id,fields.编号,fields.名称,fields.作者,fields.分类,fields.描述,fields.价格,"/upload_img/"+files.img.name],function(err,b,fields){
+  //  res.redirect('/'); 
+  res.redirect('/manage_book'); 
+});
+  })
+
+  
 });
 
 //修改
@@ -39,9 +57,9 @@ router.post('/a',(req,res)=>{
   });
 
 //删除
-router.post('/a',(req,res)=>{
+router.post('/b',(req,res)=>{
     connection.query("delete from book where name=?",[req.body.名称],(err,a,fields)=>{
-      res.redirect('/manage_book');
+      res.redirect('/manage_book'); 
     }) ;
   });
 

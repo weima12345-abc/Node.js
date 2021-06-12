@@ -7,18 +7,13 @@ var ejs=require('ejs');
 
 var session=require("express-session");
 var LoginRouter=require('./routes/relogin');
-var personRouter = require('./routes/person');
-var zcRouter = require('./routes/zc1');
+
+
 var dtxrRouter=require('./routes/dtxr');
 var ind4Router=require('./routes/index2');
-var ind3Router=require('./routes/moudle_search');
 var ind2Router=require('./routes/search');
-var ind1Router=require('./routes/dbutils');
-var indRouter=require('./routes/index');
-var test3Router=require('./routes/test3');
 var f=require('./routes/dtxr');
-var indentRouter=require('./routes/index1'); 
-var someindentRouter=require('./routes/someindent');
+var indentRouter=require('./routes/someindent');
 var accoutRouter=require('./routes/accout');
 var accountRouter=require('./routes/account');
 var manage_accountRouter=require('./routes/manage_account'); 
@@ -26,6 +21,8 @@ var g_cRouter=require('./routes/g_c');
 var manage_bookRouter=require('./routes/manage_book'); 
 var manage_personRouter=require('./routes/manage_person');
 var manage_p_bRouter=require('./routes/manage_p_b');
+
+
 var app = express(); 
 
 
@@ -41,7 +38,7 @@ app.set('view engine', 'html');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser()); 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser("djt"));
 app.use(session({
@@ -55,19 +52,11 @@ cookie:{maxAge: 1000 * 60 * 60 * 24 * 365}
 
 
 app.use('/Login',LoginRouter);
-app.use('/person', personRouter);
-app.use('/zc', zcRouter);
 app.use('/dtxr',dtxrRouter);
-app.use('/e',ind3Router);
 app.use('/d',ind2Router); 
-app.use('/c',ind1Router);
-app.use('/b',indRouter);
-
-app.use('/',test3Router);
 app.use('/f',f);
 app.use('/g',ind4Router);//新的home
-app.use('/indent',indentRouter);
-app.use('/someindent',someindentRouter)
+app.use('/indent',indentRouter)
 app.use('/accout',accoutRouter);
 app.use('/account',accountRouter);
 app.use('/manage_account',manage_accountRouter);
@@ -75,6 +64,9 @@ app.use('/g_c',g_cRouter);
 app.use('/manage_book',manage_bookRouter);
 app.use('/manage_person',manage_personRouter);
 app.use('/manage_p_b',manage_p_bRouter);
+
+
+
 module.exports = function (app) {
   app.get('/user/blogList',pageAdmin.checkAuth, pageAdmin.pageList);
   app.all('/user/post',pageAdmin.checkAuth, pageAdmin.pagePost);

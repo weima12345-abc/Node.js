@@ -6,85 +6,52 @@
 
 <link type="text/css" href="/stylesheets/css4/style.css" rel="stylesheet" />
 
+<link href="/stylesheets/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <script src="/javascripts/js4/polyfill.min.js"></script>
 
 <div id="hero-slides">
+	
+	<div id="header">
+		<div id="logo" style="color: white;"></div>
+		<div id="menu" style="color: white;">
+		  <div id="hamburger">
+			<div class="slice"></div>
+			<div class="slice"></div>
+			<div class="slice"></div>
+		  </div>
+		</div>
+	  </div>
 
-  <div id="header">
-    <div id="logo"></div>
-    <div id="menu">
-      <div id="hamburger">
-        <div class="slice"></div>
-        <div class="slice"></div>
-        <div class="slice"></div>
-      </div>
-    </div>
-  </div>
-  
   <div id="slides-cont">
     <div class="button" id="next"></div>
     <div class="button" id="prev"></div>
-    <div id="slides">
-      <div class="slide" style="background-image: url(/images/img4/1.jpg);">
-        <div class="number">01</div>
+    <div id="slides">  
+      <% detail.forEach((d,i)=>{ %>
+      <div class="slide">
+         <form action="/account/a" method="POST">
+      
+         <img style="height: 437px;width: 305px;" src="<%=d.img %>">
+        <div class="number"><%=i+1 %></div>
+        <!-- <div class="number"><%=d.price %></div> -->
         <div class="body">
-          <div class="location">Shibuya, Japan</div>
-          <div class="headline">Photo by Benjamin Hung</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
+          <div class="location"><%=d.name %></div><input type="hidden" name="name" value="<%=d.name %>">
+          <div class="headline"><%=d.ms %></div>
+          
+          <!-- <div class="link">View on Unsplash</div> -->
+       
+        <button class="link" type="submit">View on Unsplash</button>
+        
+        
+       </form>
+       
         </div>
+          
       </div>
-      <div class="slide"style="background-image: url(/images/img4/2.jpg);">
-        <div class="number">02</div>
-        <div class="body">
-          <div class="location">Mong Kok, Hong Kong</div>
-          <div class="headline">Photo by Ryan Tang</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url(/images/img4/3.jpg);">
-        <div class="number">03</div>
-        <div class="body">
-          <div class="location">Incheon, South Korea</div>
-          <div class="headline">Photo by Steve Roe</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url(/images/img4/4.jpg);">
-        <div class="number">04</div>
-        <div class="body">
-          <div class="location">Wan Chai, Hong Kong</div>
-          <div class="headline">Photo by Sean Foley</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url(/images/img4/5.jpg);">
-        <div class="number">05</div>
-        <div class="body">
-          <div class="location">Shibuya-ku, Japan</div>
-          <div class="headline">Photo by Alex Knight</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url(/images/img4/6.jpg);">
-        <div class="number">06</div>
-        <div class="body">
-          <div class="location">Tokyo, Japan</div>
-          <div class="headline">Photo by Benjamin Hung</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-      <div class="slide" style="background-image: url(/images/img4/1.jpg);">
-        <div class="number">07</div>
-        <div class="body">
-          <div class="location">Taipei City, Taiwan</div>
-          <div class="headline">Photo by Jesus In Taiwan</div><a href="#">
-            <div class="link">View on Unsplash</div></a>
-        </div>
-      </div>
-    </div>
+       
+    <%})  %>
     <div id="next-catch"></div>
     <div id="prev-catch"></div>
   </div>
@@ -173,5 +140,16 @@ sleep(100).then(demo);
 <p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
 <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
 </div>
+
+
+ 
+ 
+
+
+
+
+  <!-- Template Main JS File -->
+
 </body>
+
 </html>

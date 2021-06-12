@@ -38,7 +38,7 @@ router.post('/a',(req,res)=>{
   });
 
 //删除
-router.post('/a',(req,res)=>{
+router.post('/b',(req,res)=>{
     connection.query("delete from user where name=?",[req.body.name],(err,a,fields)=>{
       res.redirect('/manage_person');
     }) ;

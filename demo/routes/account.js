@@ -30,10 +30,10 @@ router.post('/',(req,res)=>{
               res.render('indent_fail');                    
             }
                    });
-                   }) 
-  //下订单
+                   })  
+  //下订单 
   router.post('/a',(req,res)=>{  
-           connection.query("insert into 租赁表(id,姓名,书籍名称,邮箱,书籍状态) value(?,?,?,?,?) ",[3,"李四", req.body.名称,"18174001013@139.com","借出"],(err,a,fields)=>{
+           connection.query("insert into 租赁表(id,name,book_name,yx) value(?,?,?,?) ",[3,"李四", req.body.name,"18174001013@139.com"],(err,a,fields)=>{
 res.redirect('/account'); 
            })
     
